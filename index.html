@@ -135,6 +135,92 @@ body.exam .stim,body.exam .card.exam{user-select:none;-webkit-user-select:none}
 .timer.warn{background:#FFE1DB;color:#B91C1C;animation:pulse 1s infinite}
 @media(prefers-reduced-motion:reduce){.timer.warn{animation:none}}
 #modal .band{font-family:Nunito,sans-serif}
+/* pecahan bertumpuk */
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.1;margin:0 .15em;font-family:'Cambria Math','Latin Modern Math','STIX Two Math',Cambria,'Noto Serif',serif;font-size:1.12em;font-weight:600}
+.fr .n{border-bottom:.09em solid currentColor;padding:0 .22em .04em}.fr .d{padding:.04em .22em 0}
+.wh{font-family:'Cambria Math','Latin Modern Math',Cambria,'Noto Serif',serif;font-size:1.12em;font-weight:600;vertical-align:middle;margin-left:.1em}
+/* suara */
+#snd{position:fixed;left:12px;bottom:12px;z-index:25;display:flex;gap:6px}
+#snd button{width:44px;height:44px;border-radius:50%;border:2px solid #D9CFEF;background:#fff;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(91,42,154,.15)}
+body.has-nav #snd{bottom:92px}body.exam #snd,body.guru #snd{display:none}
+/* beranda identitas */
+.idt{width:100%;border-collapse:collapse}.idt th{width:34%;text-align:left;color:#5E5278;font-weight:700;padding:8px;vertical-align:top}.idt td{padding:8px;border-bottom:1px solid #EDE7FA}
+.tp{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;margin:10px 0}.tp b{background:#EDE7FA;color:#3A1A6B;border-radius:12px;padding:4px 10px}
+.pm{background:#F1EBFF;border-radius:16px;padding:14px;margin:10px 0}
+.step{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;margin:12px 0}.step i{width:44px;height:44px;border-radius:50%;background:#3E8E2F;color:#fff;display:grid;place-items:center;font:800 1.2rem Nunito,sans-serif;font-style:normal}
+.opt .fr,.kat .fr{font-size:1.5em}h3 .fr,.stim .fr{font-size:1.3em}
+/* ===== materi ===== */
+.mat{max-width:900px}
+.mi{width:48px;height:48px;border-radius:16px;background:var(--c,#7c4dcc);display:grid;place-items:center;font-size:1.6rem;flex:none;box-shadow:0 4px 0 rgba(0,0,0,.15)}.mi.big{width:72px;height:72px;font-size:2.4rem}
+.node{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.mhead{display:flex;gap:16px;align-items:center;border-left:10px solid var(--c)}
+.msec{border-left:8px solid var(--c,#7c4dcc);border-radius:20px;background:#fff;margin:14px 0;box-shadow:0 8px 24px rgba(91,42,154,.1);overflow:hidden}
+.msec .hd{display:flex;gap:10px;align-items:center;padding:12px 16px;cursor:pointer;min-height:48px}.msec .hd i{margin-left:auto;font-style:normal;transition:transform .2s}
+.msec .ib{width:38px;height:38px;border-radius:50%;background:var(--c);display:grid;place-items:center;color:#fff;font-size:1.2rem;flex:none}
+.msec .sb{padding:0 18px 18px;line-height:1.7}.msec.cl .sb{display:none}.msec.cl .hd i{transform:rotate(-90deg)}
+.msec p{margin:.6em 0}
+mark.pb2{background:#FFE1CC;color:#8a3b00;border-radius:6px;padding:0 6px;font-weight:800}mark.pn3{background:#D5F5F0;color:#0b5c54;border-radius:6px;padding:0 6px;font-weight:800}
+.vid{padding:16px}.vscr{background:linear-gradient(#fff,#f7f3ff);border:3px solid #E1D7F7;border-radius:20px;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px;margin:10px 0;text-align:center}
+.vcap{background:#FFF8EF;border-left:6px solid #ff8a3d;border-radius:14px;padding:12px 14px;min-height:3.4em;line-height:1.7;font-size:1.05rem}
+.vctl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}.vpg{display:flex;gap:5px;margin-left:auto}.vpg i{width:12px;height:12px;border-radius:50%;background:#E1D7F7}.vpg i.d{background:#3E8E2F}.vpg i.c{background:#ff8a3d;transform:scale(1.3)}
+.vid details{margin-top:10px}.vid details li{margin:6px 0}
+.vb{width:min(100%,460px)}.va{width:min(100%,300px)}.vp{max-width:46vw}
+.br{display:flex;align-items:center;gap:10px;width:100%;max-width:560px}.bl{flex:0 0 96px;text-align:right;font-weight:700;font-size:.95rem}.stk{display:flex;flex-direction:column;gap:8px;align-items:center;width:100%}
+.pp{animation:pp .45s cubic-bezier(.3,1.6,.5,1) both;transform-box:fill-box;transform-origin:center}@keyframes pp{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.mx{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:1.3rem;font-weight:700;margin:8px 0}.mx .ar{font-size:.8rem;line-height:1.1;background:#EDE7FA;color:#5B2A9A;border-radius:10px;padding:3px 8px;text-align:center}.mx .big,.big{font-size:1.5rem;color:#3A1A6B}
+.cmp{font-size:1.5rem;font-weight:800;text-align:center;margin:8px 0;padding:8px 14px;background:#EDE7FA;border-radius:16px}
+.pzr{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.lns{text-align:left;background:#fff;border:2px dashed #7c4dcc;border-radius:16px;padding:10px 16px;font-size:1.15rem}.ln{margin:4px 0;animation:pp .4s both}.ln:nth-child(2){animation-delay:.3s}.ln:nth-child(3){animation-delay:.6s}.ln:nth-child(4){animation-delay:.9s}.ln:nth-child(5){animation-delay:1.2s}
+.ring2{background:#FFF3C4;border:3px solid #FFC93C;border-radius:20px;padding:16px 22px;font-size:1.15rem;line-height:1.8;animation:pp .5s both}
+.lit{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;width:100%}.lit>div{background:#EDE7FA;border-radius:16px;padding:12px;animation:pp .5s both}.lit>div:nth-child(2){animation-delay:.25s}.lit>div:nth-child(3){animation-delay:.5s}.lit>div:nth-child(4){animation-delay:.75s}
+.lit2{background:#fff;border-radius:16px;padding:10px 16px;text-align:left;line-height:1.8}
+.nl{position:relative;width:min(100%,500px);height:100px;margin:10px 0}.nlb{position:absolute;left:0;right:0;top:46px;height:4px;background:#7c4dcc;border-radius:4px}.nlb i{position:absolute;top:-8px;width:3px;height:20px;background:#7c4dcc;transform:translateX(-50%)}
+.nl b{position:absolute;top:0;transform:translateX(-50%);background:var(--c);color:#fff;border-radius:12px;padding:2px 10px;animation:pp .5s both}.nl b::after{content:"";position:absolute;left:50%;top:100%;border:7px solid transparent;border-top-color:var(--c);transform:translateX(-50%)}
+.nl .n0,.nl .n1{position:absolute;top:70px;font-weight:800}.nl .n0{left:-4px}.nl .n1{right:-4px}
+.g100{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;width:min(100%,260px)}.g100 u{aspect-ratio:1;background:#fff;border:2px solid #E1D7F7;border-radius:4px;animation:pp .3s both}.g100 u.on{background:#ff8a3d;border-color:#ff8a3d}.g100 u.g{background:#1fb5a8;border-color:#1fb5a8}
+.ask{background:#EDE7FA;border-radius:18px;padding:14px;margin:10px 0;text-align:left}.bx{background:#E3F7E8;border-radius:14px;padding:10px 14px;margin:8px 0;line-height:1.7}
+.ex{background:#FFF3C4;border-radius:14px;padding:10px 14px;margin-bottom:8px}.steps{padding-left:1.4em;line-height:1.9}.steps li{margin:6px 0}
+.cx{display:flex;gap:12px;align-items:center;background:#F7F3FF;border-radius:16px;padding:10px 14px;margin:8px 0}.cx span{font-size:2rem}.cx p{margin:0}
+.cq{margin:14px 0}.cq .cf{margin-top:6px}.ct{text-align:center;margin:14px 0}
+.wd{background:#FBF8FF;border:2px solid #E1D7F7;border-radius:18px;padding:14px;margin:12px 0}.wd h4{margin:0 0 8px}.wd input[type=range]{width:100%}
+.tiles{display:flex;gap:10px;flex-wrap:wrap}.tile{min-width:72px;min-height:72px;border-radius:16px;border:3px solid #D9CFEF;background:#fff;font-size:1.2rem;cursor:pointer}.tile.on{background:#E3F7E8;border-color:#3E8E2F}
+@media(max-width:560px){.bl{flex-basis:70px;font-size:.8rem}.cmp{font-size:1.2rem}.mhead{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.pp,.ln,.ring2,.lit>div,.nl b,.g100 u{animation:none}}
+/* ===== TKA, alarm, labirin, urut, konfeti ===== */
+body.exam{background:#e9ecf6}
+.tkw{max-width:1000px;margin:12px auto 0;border:3px solid #0b1f5c;border-radius:14px;overflow:hidden;background:#fff}
+.tkh{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0b1f5c;color:#fff;padding:14px 18px}.tkh b{font:800 1.15rem Nunito,sans-serif}.tkh small{opacity:.9}
+.tmr{background:#fff;color:#0b1f5c;border-radius:14px;padding:6px 16px;font:800 1.6rem 'Baloo 2',Nunito,sans-serif;min-width:104px;text-align:center}.tmr.warn{background:#ffe1db;color:#b91c1c}
+.tkb{display:grid}.tkb.two{grid-template-columns:1fr 1fr}@media(max-width:820px){.tkb.two{grid-template-columns:1fr}}
+.tkb .tks{background:#eceaf6;padding:16px 18px;border-right:2px solid #d4d0ea;border-radius:0;max-height:64vh;overflow:auto}
+.tkq{padding:16px 18px;max-height:64vh;overflow:auto}.tkq h3{margin:.3em 0}
+.tkp{height:12px;border-radius:99px;background:#d9d6f3;margin-bottom:12px}.tkp i{display:block;height:100%;border-radius:99px;background:#6b63d6;transition:width .3s}
+.qt{font-weight:700;font-size:1.1rem;line-height:1.6}.ptag{display:inline-block;background:#e4e0ff;color:#2a1f7a;border-radius:99px;padding:4px 14px;font-weight:700;font-size:.85rem;margin:6px 0 10px}
+.op{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;background:#f4f2ff;border:2px solid #c9c4ee;border-radius:14px;padding:12px 14px;margin:8px 0;font:700 1rem Nunito,sans-serif;color:#171b2b;cursor:pointer;min-height:56px}.op .gl{font-size:1.3rem;line-height:1.2}.op.sel{background:#dfe6ff;border-color:#0b1f5c}
+.op.kat{display:grid;grid-template-columns:1fr auto;align-items:center;cursor:default}.op.kat .bs{display:flex;gap:6px}.op.kat .bs button{min-width:84px;min-height:48px;border-radius:12px;border:2px solid #c9c4ee;background:#fff;font:700 1rem Nunito,sans-serif;cursor:pointer}.op.kat .bs button.sel{background:#dfe6ff;border-color:#0b1f5c}
+.tkn{border-top:3px solid #0b1f5c;padding:12px 18px;background:#fff}.hint{color:#2a1f7a;font-weight:700;margin-bottom:8px}.nbs{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.nbs button{min-width:48px;height:46px;border-radius:12px;border:2px solid #b9b5df;background:#f4f2ff;font:800 1rem Nunito,sans-serif;cursor:pointer}.nbs button.done{background:#d9f5dd;border-color:#3E8E2F}.nbs button.rg{background:#ffe3c2;border-color:#ff8a3d}.nbs button.cur{outline:4px solid #2563eb;outline-offset:1px}
+.lgd{font-size:.85rem;margin-left:8px}.lgd i{display:inline-block;width:12px;height:12px;margin:0 4px 0 10px;border-radius:3px}.lgd i.g{background:#3E8E2F}.lgd i.o{background:#ff8a3d}
+.tkf{max-width:1000px;margin:10px auto 24px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:0 4px}
+.tkf button{min-height:52px;border-radius:14px;border:0;background:#e6e4f2;color:#171b2b;font:800 1rem Nunito,sans-serif;padding:0 18px;box-shadow:0 4px 0 #bdb9d6;cursor:pointer}.tkf .bl{background:#1f6bff;color:#fff;box-shadow:0 4px 0 #0b3fa8}.tkf button:disabled{opacity:.45;cursor:not-allowed}.tkf button:active{transform:translateY(3px);box-shadow:none}
+.rgl{display:flex;gap:8px;align-items:center;font-weight:800;min-height:48px}.rgl input{width:24px;height:24px}
+.alm{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:repeating-linear-gradient(45deg,rgba(0,0,0,.06) 0 2px,transparent 2px 5px),radial-gradient(circle at 50% 28%,#ea4a22,#b52a0c);color:#fff;text-align:center;padding:24px}
+.almc{max-width:640px}.almc h1{font:800 clamp(2rem,7vw,3.4rem) 'Baloo 2',Nunito,sans-serif;margin:.2em 0;text-shadow:0 3px 0 rgba(0,0,0,.2)}.almc h3{margin:.3em 0 1em}.almc p{font-size:1.15rem;line-height:1.7}
+.sir{font-size:5.5rem;animation:sir .45s infinite alternate;filter:drop-shadow(0 0 14px #ffd54a)}@keyframes sir{from{transform:scale(1) rotate(-8deg)}to{transform:scale(1.15) rotate(8deg)}}
+.almc button{margin-top:18px;background:#fff;color:#2b1b4d;border:0;border-radius:16px;padding:14px 28px;min-height:56px;font:800 1.15rem Nunito,sans-serif;cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.25)}
+.mzw{max-width:min(100%,560px);margin:10px auto}.mz{position:relative;display:grid;grid-template-columns:repeat(var(--W),1fr);border:3px solid #3A1A6B;background:#fff7e8;border-radius:10px;user-select:none;touch-action:pan-y}
+.mc{aspect-ratio:1;position:relative;box-sizing:border-box}.mc.wn{border-top:3px solid #3A1A6B}.mc.we{border-right:3px solid #3A1A6B}.mc.ws{border-bottom:3px solid #3A1A6B}.mc.ww{border-left:3px solid #3A1A6B}
+.mc .ob{position:absolute;inset:14%;display:grid;place-items:center;border-radius:50%;background:var(--o);color:#fff;font:800 1rem Nunito,sans-serif;animation:pl 1.4s infinite}@keyframes pl{50%{transform:scale(1.12)}}
+.pn2{position:absolute;display:grid;place-items:center;font-size:1.5rem;transition:left .14s,top .14s;z-index:2;pointer-events:none;filter:drop-shadow(0 0 5px #ff8a3d)}
+.mzr{display:flex;flex-direction:column;gap:10px;align-items:center}.lg{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.lg span{background:#f6f0ff;border-radius:12px;padding:5px 12px}
+.dp{display:grid;grid-template-columns:repeat(3,56px);grid-template-rows:repeat(2,52px);gap:6px;justify-content:center}.dp button{padding:0;font-size:1.25rem;min-height:0}.dp .u{grid-column:2;grid-row:1}.dp .l{grid-column:1;grid-row:2}.dp .d{grid-column:2;grid-row:2}.dp .r{grid-column:3;grid-row:2}
+.urs{min-height:56px;display:flex;flex-wrap:wrap;gap:8px;padding:10px;background:#F1EBFF;border-radius:14px;margin:8px 0}.uc{display:flex;align-items:center;gap:8px;background:#fff;border:2px solid #7c4dcc;border-radius:12px;padding:6px 10px}.uc b{background:#7c4dcc;color:#fff;border-radius:50%;min-width:26px;height:26px;display:grid;place-items:center}.uc.ok{border-color:#3E8E2F}.uc.no{border-color:#F2705C}.uro{display:grid;gap:6px}
+.burst{position:fixed;inset:0;pointer-events:none;z-index:9998}.burst span{position:absolute;bottom:30%;font-size:2rem;animation:bu 1.4s ease-out forwards}@keyframes bu{to{transform:translate(var(--dx),-60vh) rotate(360deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){.sir,.mc .ob,.burst span{animation:none}}
+.mzr{align-items:stretch}.mzw{width:min(100%,560px);margin:10px auto}.dp{align-self:center}
+.almc h1,.almc h3{color:#fff}body.exam .burst{display:none}
+details.card summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+.mzw{width:min(100%,470px)}
 
 </style>
 </head>
@@ -204,9 +290,9 @@ function landing() {
   <section><h2>Kata mereka</h2><p>Ketuk kartu untuk membaca selengkapnya.</p><div class="grid" id="tm">${TESTI.map((t, i) => `<div class="fl" data-i="${i}" tabindex="0" role="button" aria-label="Buka testimoni ${esc(t.j)}"><div><div class="f"><span class="em">${t.e}</span><h3>${t.j}</h3></div><div class="b"><p>“${t.s}”</p><span class="tag">${t.o}</span></div></div></div>`).join('')}</div></section>
   </main>
   <footer class="wrap" style="padding:24px 16px;color:var(--mut)">© SMP Maitreyawira Bintan Center • Kurikulum Merdeka Fase D</footer>`;
-  document.getElementById('mulai').onclick = () => S.tok ? peta() : loginView();
-  M.querySelectorAll('[data-m]').forEach(b => b.onclick = () => S.tok ? peta() : loginView());
-  const gl = document.getElementById('goLogin'), gm = document.getElementById('goMap'); if (gl) gl.onclick = loginView; if (gm) gm.onclick = peta;
+  document.getElementById('mulai').onclick = () => S.tok ? beranda() : loginView();
+  M.querySelectorAll('[data-m]').forEach(b => b.onclick = () => S.tok ? beranda() : loginView());
+  const gl = document.getElementById('goLogin'), gm = document.getElementById('goMap'); if (gl) gl.onclick = loginView; if (gm) gm.onclick = beranda;
   M.querySelectorAll('.fl').forEach(c => { const o = () => modal(`<h3>${TESTI[c.dataset.i].e} ${TESTI[c.dataset.i].j}</h3><p>${TESTI[c.dataset.i].f}</p><span class="tag">${TESTI[c.dataset.i].o}</span><p><button class="btn" id="x">Tutup</button></p>`); c.onclick = o; c.onkeydown = e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), o()); });
 }
 let flipI = 0; setInterval(() => { const c = document.querySelectorAll('#tm .fl'); if (!c.length || document.hidden) return; c.forEach(x => x.classList.remove('flip')); c[flipI++ % c.length].classList.add('flip'); }, 4000);
@@ -219,7 +305,7 @@ function loginView() {
   document.getElementById('f').onsubmit = async e => {
     e.preventDefault(); const b = e.submitter; b.disabled = true; const r = await api('auth.login', { nama: n.value }); b.disabled = false;
     if (!r.success) return er.textContent = r.message;
-    S.tok = r.data.token; S.nama = r.data.nama; localStorage.pp_tok = S.tok; localStorage.pp_nama = S.nama; peta();
+    S.tok = r.data.token; S.nama = r.data.nama; localStorage.pp_tok = S.tok; localStorage.pp_nama = S.nama; mainkan('masuk'); beranda();
   };
 }
 const TAHAP = { A1: ['🍕', 'Asesmen 1: Pesta Pizza', 'Dunia 1 • Mudah, bernarasi'], R1: ['📝', 'Refleksi 1', 'Dunia 1'], A2: ['🗝️', 'Asesmen 2: Peti Harta', 'Dunia 2 • Menengah'], R2: ['📝', 'Refleksi 2', 'Dunia 2'], A3: ['⛵', 'Asesmen 3: Mode Ujian TKA', 'Dunia 3 • Individu, 3 peringatan'], R3: ['🏅', 'Refleksi 3 & Lencana', 'Dunia 3'] };
@@ -329,6 +415,52 @@ addEventListener('online', async () => { const t = localStorage.pp_tunda; if (!t
 
 </script>
 <script>
+// Pecahan bertumpuk (fx) + suara sintetis Web Audio (tanpa berkas audio)
+const FR_RE = /(^|[^\w/.,])(?:(\d+)\s+)?(\d{1,3})\/(\d{1,3})(?![\w/])/g;
+const frH = (w, a, b) => (w ? `<span class="wh">${w}</span>` : '') + `<span class="fr" role="math" aria-label="${a} per ${b}"><span class="n">${a}</span><span class="d">${b}</span></span>`;
+const fx = t => esc(String(t == null ? '' : t)).replace(FR_RE, (m, pre, w, a, b) => pre + frH(w, a, b));          // teks biasa -> aman + pecahan bertumpuk
+const fh = h => String(h == null ? '' : h).split(/(<[^>]+>)/).map(p => p[0] === '<' ? p : p.replace(FR_RE, (m, pre, w, a, b) => pre + frH(w, a, b))).join('');   // HTML -> hanya teks yang diubah
+
+let AC = null;
+const Suara = { sfx: localStorage.pp_sfx !== '0', musik: localStorage.pp_musik === '1' };
+function ac_() { try { AC = AC || new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); return AC; } catch (e) { return null; } }
+function nada(f, t, d, jenis, v, ke) {
+  const c = ac_(); if (!c) return; const o = c.createOscillator(), g = c.createGain(), t0 = c.currentTime + t;
+  o.type = jenis || 'sine'; o.frequency.setValueAtTime(f, t0); if (ke) o.frequency.exponentialRampToValueAtTime(ke, t0 + d);
+  g.gain.setValueAtTime(.0001, t0); g.gain.exponentialRampToValueAtTime(v || .12, t0 + .02); g.gain.exponentialRampToValueAtTime(.0001, t0 + d);
+  o.connect(g); g.connect(c.destination); o.start(t0); o.stop(t0 + d + .05);
+}
+const SFX = {
+  klik() { nada(660, 0, .06, 'triangle', .07); },
+  masuk() { [392, 523, 659].forEach((f, i) => nada(f, i * .1, .2, 'sine', .12)); },
+  benar() { [523, 659, 784, 1047].forEach((f, i) => nada(f, i * .09, .18, 'triangle', .13)); },
+  salah() { nada(330, 0, .22, 'sawtooth', .07, 220); nada(247, .2, .32, 'sawtooth', .07, 165); },
+  sorak() { [523, 659, 784, 1047, 784, 1047, 1319].forEach((f, i) => nada(f, i * .11, .24, 'triangle', .14)); },
+  lembut() { [392, 440, 523].forEach((f, i) => nada(f, i * .14, .3, 'sine', .1)); },
+  tik() { nada(1000, 0, .03, 'square', .035); },
+  alarm() { for (let i = 0; i < 4; i++) { nada(880, i * .22, .12, 'square', .1); nada(660, i * .22 + .11, .1, 'square', .1); } }
+};
+function mainkan(k) { if (Suara.sfx && SFX[k]) SFX[k](); }
+function bunyi(n) { if (n) { SFX.alarm(); try { navigator.vibrate && navigator.vibrate(300); } catch (e) {} } else mainkan('klik'); }   // alarm ujian selalu berbunyi
+let musikT = null; const MEL = [523, 587, 659, 784, 659, 587, 523, 392];
+function musik(on) {
+  Suara.musik = on; localStorage.pp_musik = on ? '1' : '0'; clearInterval(musikT); musikT = null; if (!on) return; let i = 0;
+  const step = () => { if (document.body.classList.contains('exam') || document.hidden) return; nada(MEL[i % 8] / 2, 0, .55, 'sine', .035); if (i % 4 === 0) nada(MEL[i % 8] / 4, 0, 1.2, 'sine', .03); i++; };
+  step(); musikT = setInterval(step, 620);
+}
+function panelSuara() {
+  const d = document.createElement('div'); d.id = 'snd';
+  d.innerHTML = '<button type="button" id="sb" aria-label="Efek suara"></button><button type="button" id="mb" aria-label="Musik latar"></button>'; document.body.appendChild(d);
+  const sg = () => { sb.textContent = Suara.sfx ? '🔊' : '🔇'; sb.setAttribute('aria-pressed', Suara.sfx); mb.textContent = Suara.musik ? '🎵' : '🎶'; mb.setAttribute('aria-pressed', Suara.musik); mb.style.opacity = Suara.musik ? 1 : .55; };
+  sb.onclick = () => { Suara.sfx = !Suara.sfx; localStorage.pp_sfx = Suara.sfx ? '1' : '0'; sg(); mainkan('klik'); };
+  mb.onclick = () => { musik(!Suara.musik); sg(); };
+  sg(); if (Suara.musik) document.addEventListener('pointerdown', () => musik(true), { once: true });
+}
+panelSuara();
+document.addEventListener('click', e => { if (document.body.classList.contains('exam')) return; const t = e.target.closest('.btn,.opt,.tabs button,.navp button,.kat button,.grid5 button,summary'); if (t && !t.disabled && !t.closest('#snd')) mainkan('klik'); });
+
+</script>
+<script>
 // Mesin kuis lengkap: Asesmen 1-2 (umpan balik instan) dan Asesmen 3 (mode ujian, sesi & timer di server)
 const LJ = 'ABCDEFGH';
 function pizi(m, w) {
@@ -337,8 +469,8 @@ function pizi(m, w) {
   const br = m === 'alarm' ? '<path d="M38 46l10 4M66 46l-10 4" stroke="#2B1B4D" stroke-width="3" stroke-linecap="round"/>' : m === 'encourage' ? '<path d="M39 47q5-3 9 0M56 47q5-3 9 0" stroke="#2B1B4D" stroke-width="2.5" fill="none" stroke-linecap="round"/>' : '';
   return `<svg class="pz" viewBox="0 0 104 124" width="${w || 110}" role="img" aria-label="Pizi, maskot pizza"><path d="M52 118L12 34q40-20 80 0z" fill="#FFC93C"/><path d="M12 34q40-20 80 0l-3 8q-37-15-74 0z" fill="#E8A33D"/><circle cx="34" cy="48" r="5" fill="#F2705C"/><circle cx="72" cy="48" r="5" fill="#F2705C"/><circle cx="52" cy="92" r="5" fill="#F2705C"/><circle cx="36" cy="66" r="4" fill="#FFA08F" opacity=".7"/><circle cx="68" cy="66" r="4" fill="#FFA08F" opacity=".7"/>${ey}${br}<path d="${mo}" fill="${m === 'cheer' ? '#7A1218' : 'none'}" stroke="#2B1B4D" stroke-width="3" stroke-linecap="round"/><path d="M28 32q24-30 48 0z" fill="#5B2A9A"/><rect x="24" y="30" width="56" height="7" rx="3.5" fill="#3A1A6B"/></svg>`;
 }
-const adaJ = (s, j) => j !== undefined && j !== null && (s.jenis === 'ISI' ? String(j).trim() !== '' : s.jenis === 'KAT' ? Array.isArray(j) && j.length === s.pilihan.length && j.every(Boolean) : Array.isArray(j) ? j.length > 0 : !!j);
-const cocokK = (s, j) => { if (!adaJ(s, j)) return false; const k = String(s.kunci); if (s.jenis === 'ISI') { const x = String(j).toLowerCase().replace(/\s/g, ''); return k.split('|').some(y => y.toLowerCase().replace(/\s/g, '') === x); } if (s.jenis === 'KAT') return [].concat(j).join(',') === k.split(',').map(z => z.trim()).join(','); return [].concat(j).sort().join(',') === k.split(',').map(z => z.trim()).sort().join(','); };
+const adaJ = (s, j) => j !== undefined && j !== null && (s.jenis === 'ISI' ? String(j).trim() !== '' : s.jenis === 'KAT' ? Array.isArray(j) && j.length === s.pilihan.length && j.every(Boolean) : s.jenis === 'URUT' ? Array.isArray(j) && j.length === s.pilihan.length : Array.isArray(j) ? j.length > 0 : !!j);
+const cocokK = (s, j) => { if (!adaJ(s, j)) return false; const k = String(s.kunci); if (s.jenis === 'ISI') { const x = String(j).toLowerCase().replace(/\s/g, ''); return k.split('|').some(y => y.toLowerCase().replace(/\s/g, '') === x); } if (s.jenis === 'KAT' || s.jenis === 'URUT') return [].concat(j).join(',') === k.split(',').map(z => z.trim()).join(','); return [].concat(j).sort().join(',') === k.split(',').map(z => z.trim()).sort().join(','); };
 const pelDots = n => [0, 1, 2].map(i => `<i class="${i < n ? 'on' : ''}"></i>`).join('');
 const kunciModal = on => { const m = document.getElementById('modal'); if (on) m.dataset.lock = '1'; else delete m.dataset.lock; };
 const tutupModal = () => { kunciModal(0); document.getElementById('modal').hidden = true; };
@@ -368,6 +500,7 @@ async function kuis(n) {
   if (!d.soal.length) { toast('Bank soal masih kosong. Hubungi gurumu.'); return peta(); }
   const idS = d.soal.map(s => s.id).join();
   Q = { n, a3, soal: d.soal, i: 0, j: Object.assign({}, d.jawaban || {}), cek: {}, ragu: {}, sv: {}, idKirim: 'K' + Date.now() + Math.random().toString(36).slice(2, 7), idSesi: d.idSesi || '', stop: false, pel: a3 ? d.sesi.pelanggaran : 0, mode: a3 ? d.sesi.mode : '' };
+  Q.maze = n === '2' && d.soal.every(x => x.jenis === 'PG' && x.pilihan.length <= 6);
   if (a3) {
     if (d.sesi.status !== 'berjalan') { Q.stop = true; return kirim(); }
     Q.akhir = Date.now() + d.sesi.sisaDetik * 1000; Object.keys(Q.j).forEach(k => Q.sv[k] = JSON.stringify(Q.j[k]));
@@ -380,34 +513,36 @@ async function kuis(n) {
 }
 function stimHtml(st) {
   if (!st) return ''; let b;
-  if (st.jenis === 'tabel') { const rw = String(st.isi).split('\n').filter(Boolean).map(r => r.split('|').map(c => c.trim())); b = `<div class="scroll"><table>${rw.map((r, i) => `<tr>${r.map(c => i ? `<td>${esc(c)}</td>` : `<th>${esc(c)}</th>`).join('')}</tr>`).join('')}</table></div>`; }
-  else b = String(st.isi).split('\n').map(l => `<p>${esc(l)}</p>`).join('');
-  return `<aside class="stim"><span class="tag">📖 Bacaan & data</span><h3>${esc(st.judul)}</h3>${b}</aside>`;
+  if (st.jenis === 'tabel') { const ls = String(st.isi).split('\n').filter(Boolean), rw = ls.filter(l => l.indexOf('|') >= 0).map(r => r.split('|').map(c => c.trim())); b = ls.filter(l => l.indexOf('|') < 0).map(l => `<p>${fx(l)}</p>`).join('') + `<div class="scroll"><table>${rw.map((r, i) => `<tr>${r.map(c => i ? `<td>${fx(c)}</td>` : `<th>${fx(c)}</th>`).join('')}</tr>`).join('')}</table></div>`; }
+  else b = String(st.isi).split('\n').map(l => `<p>${fx(l)}</p>`).join('');
+  return `<aside class="stim"><span class="tag">📖 Bacaan & data</span><h3>${fx(st.judul)}</h3>${b}</aside>`;
 }
 function bodySoal(s, j, cek) {
   const kn = String(s.kunci || '').split(',').map(x => x.trim());
-  if (s.jenis === 'ISI') return `<input class="isi" id="isi" value="${esc(j || '')}" autocomplete="off" aria-label="Tuliskan jawabanmu" placeholder="mis. 3/8">${cek ? `<p>${cocokK(s, j) ? '✅ Tepat!' : '❌ Kunci: <b>' + esc(String(s.kunci).split('|')[0]) + '</b>'}</p>` : ''}`;
-  if (s.jenis === 'KAT') return s.pilihan.map((t, k) => { const v = (j || [])[k]; const f = v => cek ? (kn[k] === v ? 'ok' : (j || [])[k] === v ? 'no' : '') : ((j || [])[k] === v ? 'sel' : ''); return `<div class="kat"><span>${esc(t)}</span><span class="bs"><button data-r="${k}" data-v="B" class="${f('B')}">Benar</button><button data-r="${k}" data-v="S" class="${f('S')}">Salah</button></span></div>`; }).join('');
-  return s.pilihan.map((t, k) => { const h = s.huruf ? s.huruf[k] : LJ[k], sel = [].concat(j || []).includes(h), fb = cek ? (kn.includes(h) ? 'ok' : sel ? 'no' : '') : ''; return `<button class="opt ${sel && !cek ? 'sel' : ''} ${fb}" data-h="${h}" role="${s.jenis === 'PGK' ? 'checkbox' : 'radio'}" aria-checked="${sel}"><b>${LJ[k]}</b><span>${esc(t)}</span></button>`; }).join('');
+  if (s.jenis === 'ISI') return `<input class="isi" id="isi" value="${esc(j || '')}" autocomplete="off" aria-label="Tuliskan jawabanmu" placeholder="mis. 3/8">${cek ? `<p>${cocokK(s, j) ? '✅ Tepat!' : '❌ Kunci: <b>' + fx(String(s.kunci).split('|')[0]) + '</b>'}</p>` : ''}`;
+  if (s.jenis === 'URUT') return urutHtml(s, j, cek);
+  if (s.jenis === 'KAT') return s.pilihan.map((t, k) => { const v = (j || [])[k]; const f = v => cek ? (kn[k] === v ? 'ok' : (j || [])[k] === v ? 'no' : '') : ((j || [])[k] === v ? 'sel' : ''); return `<div class="kat"><span>${fx(t)}</span><span class="bs"><button data-r="${k}" data-v="B" class="${f('B')}">Benar</button><button data-r="${k}" data-v="S" class="${f('S')}">Salah</button></span></div>`; }).join('');
+  return s.pilihan.map((t, k) => { const h = s.huruf ? s.huruf[k] : LJ[k], sel = [].concat(j || []).includes(h), fb = cek ? (kn.includes(h) ? 'ok' : sel ? 'no' : '') : ''; return `<button class="opt ${sel && !cek ? 'sel' : ''} ${fb}" data-h="${h}" role="${s.jenis === 'PGK' ? 'checkbox' : 'radio'}" aria-checked="${sel}"><b>${LJ[k]}</b><span>${fx(t)}</span></button>`; }).join('');
 }
 function tampil() {
-  const q = Q; if (!q || q.stop) return; const s = q.soal[q.i], j = q.j[s.id], a3 = q.a3, cek = !!q.cek[s.id], tot = q.soal.length;
+  const q = Q; if (!q || q.stop) return; if (q.a3) return tampilTKA(); if (q.maze) return tampilMaze(); const s = q.soal[q.i], j = q.j[s.id], a3 = q.a3, cek = !!q.cek[s.id], tot = q.soal.length;
   const dj = q.soal.filter(x => adaJ(x, q.j[x.id])).length, akhir = q.i === tot - 1;
   M.innerHTML = `<header class="top"><b>${a3 ? 'Asesmen 3 • Mode Ujian TKA' : 'Asesmen ' + q.n}</b><span class="chip">Soal ${q.i + 1}/${tot}</span>${a3 ? `<span class="timer" id="tm">⏱ ${mmss(Math.round((q.akhir - Date.now()) / 1000))}</span><span class="pel" id="pel" title="Peringatan">🛡️ ${pelDots(q.pel)}</span>` : `<button class="btn sec" id="pt" style="min-height:40px">Peta</button>`}</header>
-  <main class="wrap"><div class="split ${s.stimulus ? 'has' : ''}">${stimHtml(s.stimulus)}<section class="card exam"><span class="tag">${{ PG: 'Pilih satu', PGK: 'Pilih semua yang benar', KAT: 'Benar atau Salah', ISI: 'Isian' }[s.jenis] || ''}${s.tp ? ' • ' + esc(s.tp) : ''}</span><h3 style="margin-top:8px">${esc(s.teks)}</h3>${bodySoal(s, j, cek)}
-  ${cek ? `<div class="card" style="background:#E3F7E8;margin-top:10px"><b>${cocokK(s, j) ? 'Hebat sekali! 🎉' : 'Ayo coba lagi! 💪'}</b><p>${esc(s.penjelasan || '')}</p></div>` : ''}<small id="sv" style="color:#5E5278">${a3 ? 'Tersimpan otomatis ke server' : ''}</small></section></div>
+  <main class="wrap">${rangkumanHtml(q.n)}<div class="split ${s.stimulus ? 'has' : ''}">${stimHtml(s.stimulus)}<section class="card exam"><span class="tag">${{ PG: 'Pilih satu', PGK: 'Pilih semua yang benar', KAT: 'Benar atau Salah', ISI: 'Isian' }[s.jenis] || ''}${s.tp ? ' • ' + esc(s.tp) : ''}</span><h3 style="margin-top:8px">${fx(s.teks)}</h3>${bodySoal(s, j, cek)}
+  ${cek ? `<div class="card" style="background:${cocokK(s, j) ? '#E3F7E8' : '#FFF3C4'};margin-top:10px"><b>${cocokK(s, j) ? 'Hebat sekali! 🎉' : 'Belum tepat, tidak apa-apa! 💪'}</b><p>${fx(pecah(s.penjelasan).bahas)}</p>${!cocokK(s, j) && matTopik(s.tp) ? `<button class="btn sec" data-pm="${matTopik(s.tp).id}" style="min-height:44px">📖 Pelajari lagi: ${esc(matTopik(s.tp).t)}</button>` : ''}</div>` : ''}<small id="sv" style="color:#5E5278">${a3 ? 'Tersimpan otomatis ke server' : ''}</small></section></div>
   <section class="card" style="margin-top:12px"><b>Peta soal</b> <small>(${dj} terjawab dari ${tot})</small><div class="grid5">${q.soal.map((x, k) => `<button class="${adaJ(x, q.j[x.id]) ? 'done' : ''} ${q.ragu[x.id] ? 'rg' : ''} ${k === q.i ? 'cur' : ''}" data-g="${k}" aria-label="Soal ${k + 1}${q.ragu[x.id] ? ' ragu-ragu' : ''}${adaJ(x, q.j[x.id]) ? ' terjawab' : ''}">${k + 1}${q.ragu[x.id] ? '🚩' : ''}</button>`).join('')}</div></section>
   <p style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn sec" id="pv" ${q.i ? '' : 'disabled'}>← Sebelumnya</button>
   ${a3 ? `<button class="btn sun" id="rg">🚩 ${q.ragu[s.id] ? 'Batal ragu' : 'Ragu-ragu'}</button>` : `<button class="btn sun" id="ck" ${adaJ(s, j) ? '' : 'disabled'}>Periksa jawaban</button>`}
   ${akhir ? `<button class="btn" id="fin">${a3 ? 'Selesai & Ringkasan' : 'Selesai & Kirim'} ✓</button>` : `<button class="btn" id="nx">Berikutnya →</button>`}</p>${!a3 && q.n === '2' ? '<div id="tim"></div>' : ''}</main>`;
-  M.querySelectorAll('[data-h]').forEach(b => b.onclick = () => { if (q.cek[s.id]) return; const h = b.dataset.h; let a = [].concat(q.j[s.id] || []); q.j[s.id] = s.jenis === 'PGK' ? (a.includes(h) ? a.filter(x => x !== h) : a.concat(h)) : [h]; jawab(s); tampil(); });
+  M.querySelectorAll('[data-h]').forEach(b => b.onclick = () => { if (q.cek[s.id]) return; const h = b.dataset.h; let a = [].concat(q.j[s.id] || []); q.j[s.id] = s.jenis === 'PGK' ? (a.includes(h) ? a.filter(x => x !== h) : a.concat(h)) : [h]; jawab(s); if (!q.a3 && s.jenis === 'PG') { q.cek[s.id] = true; const ok = cocokK(s, q.j[s.id]); mainkan(ok ? 'benar' : 'salah'); tampil(); if (ok) burst(); return; } tampil(); });
   M.querySelectorAll('[data-r]').forEach(b => b.onclick = () => { if (q.cek[s.id]) return; const a = (q.j[s.id] || []).slice(); a.length = s.pilihan.length; a[+b.dataset.r] = b.dataset.v; q.j[s.id] = Array.from(a, x => x || ''); jawab(s); tampil(); });
+  pasangUrut(q, s, tampil);
   const isi = document.getElementById('isi'); if (isi) { isi.oninput = () => { q.j[s.id] = isi.value; jawab(s, true); const c = document.getElementById('ck'); if (c) c.disabled = !adaJ(s, q.j[s.id]); }; isi.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); const c = document.getElementById('ck'); if (c && !c.disabled) c.click(); } }; if (!cek) isi.focus(); }
   M.querySelectorAll('[data-g]').forEach(b => b.onclick = () => { q.i = +b.dataset.g; tampil(); });
   document.getElementById('pv').onclick = () => { q.i--; tampil(); };
   const nx = document.getElementById('nx'); if (nx) nx.onclick = () => { q.i++; tampil(); };
   const rg = document.getElementById('rg'); if (rg) rg.onclick = () => { q.ragu[s.id] = !q.ragu[s.id]; tampil(); };
-  const ck = document.getElementById('ck'); if (ck) ck.onclick = () => { q.cek[s.id] = true; bunyi(0); tampil(); };
+  const ck = document.getElementById('ck'); if (ck) ck.onclick = () => { q.cek[s.id] = true; mainkan(cocokK(s, q.j[s.id]) ? 'benar' : 'salah'); tampil(); };
   const pt = document.getElementById('pt'); if (pt) pt.onclick = () => { clearInterval(q.tm); Q = null; peta(); };
   const fn = document.getElementById('fin'); if (fn) fn.onclick = () => a3 ? ringkasan() : (q.soal.every(x => adaJ(x, q.j[x.id])) ? kirim() : toast('Masih ada soal yang belum dijawab.'));
   if (q.n === '2') timStatus();
@@ -429,6 +564,7 @@ function tick() {
   if (t) { t.textContent = '⏱ ' + mmss(sisa); t.classList.toggle('warn', sisa <= 300); }
   if (document.fullscreenElement) q.fs = true;
   if (sisa % 15 === 0) q.soal.forEach(s => { if (q.j[s.id] !== undefined && q.sv[s.id] !== JSON.stringify(q.j[s.id])) simpan(s.id); });   // kirim ulang yang tertunda
+  if (sisa > 0 && sisa <= 10) mainkan('tik');
   if (sisa <= 0) kirim();
 }
 function ringkasan() {
@@ -469,7 +605,7 @@ function peringatan(n) {
 
 // ---- kirim & hasil ----
 async function kirim() {
-  const q = Q; if (!q) return; clearInterval(q.tm); q.stop = true; tutupModal(); try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {} document.body.classList.remove('exam');
+  const q = Q; if (!q) return; clearInterval(q.tm); q.kb && document.removeEventListener('keydown', q.kb); q.stop = true; tutupModal(); try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {} document.body.classList.remove('exam');
   M.innerHTML = `<p class="wrap" style="padding:40px">Mengirim jawabanmu…</p>`;
   const r = await api('asesmen.kirim', { asesmen: q.n, jawaban: q.j, idKirim: q.idKirim, idSesi: q.idSesi });
   if (!r.success) {
@@ -480,12 +616,14 @@ async function kirim() {
 }
 function fmtJ(p, v, kunci) {
   const a = [].concat(v === undefined || v === null || v === '' ? [] : v);
-  if (p.jenis === 'ISI') return kunci ? esc(String(p.kunci).split('|')[0]) : (a.length ? esc(a[0]) : '<i>tidak dijawab</i>');
-  if (p.jenis === 'KAT') { const src = kunci ? String(p.kunci).split(',').map(x => x.trim()) : a; return (p.pilihan || []).map((t, k) => `${esc(t)}: <b>${src[k] === 'B' ? 'Benar' : src[k] === 'S' ? 'Salah' : '—'}</b>`).join('<br>'); }
-  const hs = kunci ? String(p.kunci).split(',').map(x => x.trim()) : a; return hs.length ? hs.map(h => `${LJ.indexOf(h) + 1 ? LJ[LJ.indexOf(h)] : h}. ${esc((p.pilihan || [])[LJ.indexOf(h)] || '')}`).join('<br>') : '<i>tidak dijawab</i>';
+  if (p.jenis === 'ISI') return kunci ? fx(String(p.kunci).split('|')[0]) : (a.length ? fx(a[0]) : '<i>tidak dijawab</i>');
+  if (p.jenis === 'URUT') { const hs = kunci ? String(p.kunci).split(',').map(x => x.trim()) : a; return hs.length ? hs.map((h, n) => `${n + 1}. ${fx((p.pilihan || [])[LJ.indexOf(h)] || '')}`).join('<br>') : '<i>tidak dijawab</i>'; }
+  if (p.jenis === 'KAT') { const src = kunci ? String(p.kunci).split(',').map(x => x.trim()) : a; return (p.pilihan || []).map((t, k) => `${fx(t)}: <b>${src[k] === 'B' ? 'Benar' : src[k] === 'S' ? 'Salah' : '—'}</b>`).join('<br>'); }
+  const hs = kunci ? String(p.kunci).split(',').map(x => x.trim()) : a; return hs.length ? hs.map(h => `${LJ.indexOf(h) + 1 ? LJ[LJ.indexOf(h)] : h}. ${fx((p.pilihan || [])[LJ.indexOf(h)] || '')}`).join('<br>') : '<i>tidak dijawab</i>';
 }
-const kartuBahas = p => `<div class="card" style="margin:10px 0;border-left:6px solid ${p.benar ? '#3E8E2F' : '#F2705C'}"><b>${p.benar ? '✓ Benar' : '✗ Perlu diperbaiki'}</b> <small>${esc(p.tp || '')}</small><p>${esc(p.teks)}</p>${p.benar ? '' : `<div class="mis"><small>Jawabanmu</small><br>${fmtJ(p, p.jawaban, 0)}</div>`}<div class="mis" style="background:#E3F7E8"><small>Kunci jawaban</small><br>${fmtJ(p, 0, 1)}</div>${p.penjelasan ? `<p>💡 ${esc(p.penjelasan)}</p>` : ''}</div>`;
+const kartuBahas = p => `<div class="card" style="margin:10px 0;border-left:6px solid ${p.benar ? '#3E8E2F' : '#F2705C'}"><b>${p.benar ? '✓ Benar' : '✗ Perlu diperbaiki'}</b> <small>${esc(p.tp || '')}</small><p>${fx(p.teks)}</p>${p.benar ? '' : `<div class="mis"><small>Jawabanmu</small><br>${fmtJ(p, p.jawaban, 0)}</div>`}<div class="mis" style="background:#E3F7E8"><small>Kunci jawaban</small><br>${fmtJ(p, 0, 1)}</div>${p.penjelasan ? `<p>💡 ${fx(pecah(p.penjelasan).bahas)}</p>` : ''}${!p.benar && matTopik(p.topik || p.tp) ? `<button class="btn sec" data-pm="${matTopik(p.topik || p.tp).id}" style="min-height:44px">📖 Pelajari ulang: ${esc(matTopik(p.topik || p.tp).t)}</button>` : ''}</div>`;
 function hasil(h, n) {
+  mainkan(h.skor >= 70 ? 'sorak' : 'lembut');
   M.innerHTML = `<main class="wrap" style="max-width:760px"><section><div class="card" style="text-align:center">${pizi(h.skor >= 70 ? 'cheer' : 'encourage', 100)}<h2>Jawabanmu terkirim! 🎉</h2><div class="ring" style="--p:${h.skor}%"><span>${h.skor}</span></div><p>${h.benar} benar dari ${h.total} soal${h.resmi === false ? ' • latihan (nilai resmi tidak berubah)' : ' • nilai resmi tercatat'}</p></div>
   <h3 style="margin-top:20px">Pembahasan</h3>${(h.pembahasan || []).sort((a, b) => a.benar - b.benar).map(kartuBahas).join('')}<p><button class="btn" id="rf">Lanjut ke refleksi</button> <button class="btn sec" id="pk">Kembali ke peta</button></p></section></main>`;
   document.getElementById('rf').onclick = () => refleksi(n); document.getElementById('pk').onclick = peta;
@@ -493,6 +631,7 @@ function hasil(h, n) {
 async function hasilA3(h) {
   if (!h) { const r = await api('a3.hasil', {}); if (!r.success) { toast(r.message); return peta(); } h = r.data; }
   if (h.status === 'dihentikan' && !h.lihat) return layarDihentikan(h);
+  mainkan(h.skor >= 70 ? 'sorak' : 'lembut');
   const tp = {}; h.pembahasan.forEach(p => { const t = tp[p.tp || '—'] = tp[p.tp || '—'] || { b: 0, t: 0 }; t.t++; if (p.benar) t.b++; });
   const predikat = h.skor >= 85 ? 'Sangat Memuaskan' : h.skor >= 70 ? 'Memuaskan' : h.skor >= 55 ? 'Cukup' : 'Perlu Penguatan';
   M.innerHTML = `<main class="wrap" style="max-width:860px"><section><div class="card" style="text-align:center">${pizi(h.skor >= 70 ? 'cheer' : 'encourage', 110)}<span class="tag">${h.mode === 'resmi' ? '🔒 Nilai resmi terkunci' : 'Latihan ulang • nilai resmi tidak berubah'}</span><h2>Skor ${h.status === 'dihentikan' ? 'sementara ' : ''}Asesmen 3</h2><div class="ring" style="--p:${h.skor}%"><span>${h.skor}</span></div><b>${predikat}</b><p>${h.benar} benar dari ${h.total} soal • ${h.pelanggaran} peringatan</p><p class="tag">Kode bukti: ${esc(h.kode || '')}</p></div>
@@ -529,7 +668,7 @@ landing = function () {
   document.getElementById('goTamu').onclick = tamu; document.getElementById('goGuru').onclick = loginGuru;
 };
 function nav(on) {
-  return `<nav class="navp" aria-label="Menu utama">${[['peta', '🏝️', 'Beranda'], ['materi', '📖', 'Materi'], ['asesmenTab', '📝', 'Asesmen'], ['progres', '🏆', 'Progres'], ['profil', '👤', 'Profil']].map(x => `<button data-n="${x[0]}" class="${on === x[0] ? 'on' : ''}" ${on === x[0] ? 'aria-current="page"' : ''}><b>${x[1]}</b>${x[2]}</button>`).join('')}</nav>`;
+  return `<nav class="navp" aria-label="Menu utama">${[['beranda', '🏠', 'Beranda'], ['materi', '📖', 'Materi'], ['peta', '🗺️', 'Asesmen'], ['progres', '🏆', 'Progres'], ['profil', '👤', 'Profil']].map(x => `<button data-n="${x[0]}" class="${on === x[0] ? 'on' : ''}" ${on === x[0] ? 'aria-current="page"' : ''}><b>${x[1]}</b>${x[2]}</button>`).join('')}</nav>`;
 }
 function pasangNav() { M.querySelectorAll('[data-n]').forEach(b => b.onclick = () => window[b.dataset.n]()); document.body.classList.add('has-nav'); }
 const memuat = t => `<p class="wrap" style="padding:40px">${t || 'Memuat…'}</p>`;
@@ -560,7 +699,7 @@ async function asesmenTab() {
 }
 async function materi() {
   M.innerHTML = memuat('Memuat materi…'); const r = await api('materi.list'); if (!r.success) { toast(r.message); return peta(); }
-  M.innerHTML = `<header class="top"><b>📖 Materi</b></header><main class="wrap"><section><h2>Belajar bersama Pizi</h2>${r.data.map(m => `<details class="card" style="margin:10px 0"><summary style="font:700 1.1rem Nunito,sans-serif;min-height:48px;cursor:pointer">${esc(m.judul)}</summary><p>${esc(m.penjelasan)}</p>${/^https:\/\//.test(m.video || '') ? `<a class="btn sec" target="_blank" rel="noopener" href="${esc(m.video)}">▶ Tonton video</a>` : ''}</details>`).join('') || '<p>Materi belum tersedia.</p>'}</section></main>${nav('materi')}`; pasangNav();
+  M.innerHTML = `<header class="top"><b>📖 Materi</b></header><main class="wrap"><section><h2>Belajar bersama Pizi</h2>${r.data.map(m => `<details class="card" style="margin:10px 0"><summary style="font:700 1.1rem Nunito,sans-serif;min-height:48px;cursor:pointer">${esc(m.judul)}</summary><p>${fx(m.penjelasan)}</p>${/^https:\/\//.test(m.video || '') ? `<a class="btn sec" target="_blank" rel="noopener" href="${esc(m.video)}">▶ Tonton video</a>` : ''}</details>`).join('') || '<p>Materi belum tersedia.</p>'}</section></main>${nav('materi')}`; pasangNav();
 }
 async function profilData() { const r = await api('siswa.profil'); return r.success ? r.data : null; }
 async function progres() {
@@ -593,10 +732,492 @@ async function tamu() {
   const r = await api('tamu.contoh'); const d = r.success ? r.data : { soal: { teks: 'Pizza dipotong 8 sama besar. Adi makan 3 potong. Bagian yang dimakan Adi?', pilihan: ['3/5', '3/8', '5/8', '8/3'], kunci: 'B' } };
   const q = d.soal; let jw = null;
   const gambar = () => {
-    M.innerHTML = `<header class="top"><b>🎈 Mode Tamu</b><button class="btn sec" id="kb" style="min-height:40px">Kembali</button></header><main class="wrap" style="max-width:640px"><section><div class="banner">Ini hanya contoh. Tidak ada nilai atau data yang tersimpan.</div><div class="card"><h3>${esc(q.teks)}</h3>${q.pilihan.map((t, k) => `<button class="opt ${jw !== null ? (LJ[k] === q.kunci ? 'ok' : jw === k ? 'no' : '') : ''}" data-k="${k}"><b>${LJ[k]}</b><span>${esc(t)}</span></button>`).join('')}${jw !== null ? `<p>${LJ[jw] === q.kunci ? '🎉 Hebat sekali!' : '💪 Ayo coba lagi!'} Pizza terbagi 8 bagian dan Adi mengambil 3 bagian, jadi 3/8.</p>` : ''}</div><p><button class="btn" id="msk">Masuk untuk mulai petualangan</button></p></section></main>`;
+    M.innerHTML = `<header class="top"><b>🎈 Mode Tamu</b><button class="btn sec" id="kb" style="min-height:40px">Kembali</button></header><main class="wrap" style="max-width:640px"><section><div class="banner">Ini hanya contoh. Tidak ada nilai atau data yang tersimpan.</div><div class="card"><h3>${fx(q.teks)}</h3>${q.pilihan.map((t, k) => `<button class="opt ${jw !== null ? (LJ[k] === q.kunci ? 'ok' : jw === k ? 'no' : '') : ''}" data-k="${k}"><b>${LJ[k]}</b><span>${fx(t)}</span></button>`).join('')}${jw !== null ? `<p>${LJ[jw] === q.kunci ? '🎉 Hebat sekali!' : '💪 Ayo coba lagi!'} Pizza terbagi 8 bagian dan Adi mengambil 3 bagian, jadi 3/8.</p>` : ''}</div><p><button class="btn" id="msk">Masuk untuk mulai petualangan</button></p></section></main>`;
     document.getElementById('kb').onclick = landing; document.getElementById('msk').onclick = () => S.tok ? peta() : loginView();
     M.querySelectorAll('[data-k]').forEach(b => b.onclick = () => { if (jw === null) { jw = +b.dataset.k; gambar(); } });
   }; gambar();
+}
+
+// ---- Beranda: identitas pembelajaran dulu (Identitas, Tujuan Belajar, Cara Belajar, Pertanyaan Pemantik) ----
+const TP_LIST = [
+  ['TP-1', 'Membaca, menuliskan, dan merepresentasikan pecahan (gambar, garis bilangan, simbol), serta menentukan pecahan senilai dan bentuk paling sederhana.'],
+  ['TP-2', 'Membandingkan dan mengurutkan pecahan, desimal, dan persen.'],
+  ['TP-3', 'Menerapkan penjumlahan dan pengurangan pecahan berpenyebut berbeda dalam masalah kontekstual.'],
+  ['TP-4', 'Menerapkan perkalian dan pembagian pecahan serta mengestimasi hasilnya dalam masalah kontekstual, termasuk literasi finansial (diskon).'],
+  ['TP-5', 'Menalar, menganalisis informasi dari teks atau data, dan mengomunikasikan alasan dalam masalah literasi-numerasi yang melibatkan pecahan, desimal, persen, dan rasio.']];
+const TP_M = { 'TP-1': [1], 'TP-2': [2], 'TP-3': [3, 4], 'TP-4': [5, 6], 'TP-5': [6] };
+const PEMANTIK = [
+  'Sebuah pizza dibagi untuk 8 orang. Apakah bagian 2/8 dan 1/4 sama besar? Bagaimana cara membuktikannya?',
+  'Resep kue memakai 3/4 kg tepung. Kalau resepnya dibuat 1 1/2 kali lipat, berapa tepung yang dibutuhkan? Bagaimana kamu menghitungnya?',
+  'Toko A memberi diskon 1/4, toko B memberi diskon 30%. Mana yang lebih hemat? Mengapa?',
+  'Mengapa 1/3 + 1/4 tidak sama dengan 2/7? Apa yang harus disamakan lebih dulu?'];
+async function beranda() {
+  document.body.classList.remove('exam', 'guru'); if (isGuru()) return guruPanel();
+  M.innerHTML = memuat('Menyiapkan berandamu…'); const p = await profilData(); const kelas = p ? p.kelas : '';
+  const tab = {
+    id: `<table class="idt"><tr><th>Nama</th><td><b>${esc(S.nama)}</b></td></tr><tr><th>Kelas</th><td>${esc(kelas) || '—'}</td></tr><tr><th>Sekolah</th><td>SMP Maitreyawira Bintan Center</td></tr><tr><th>Mata pelajaran</th><td>Matematika • Fase D • Kelas VII</td></tr><tr><th>Elemen</th><td>Bilangan</td></tr><tr><th>Topik</th><td>Pecahan Lanjutan: pecahan senilai, membandingkan dan mengurutkan, penjumlahan dan pengurangan, perkalian dan pembagian, diskon dan literasi numerasi</td></tr><tr><th>Guru pengampu</th><td>Ibu Zulfa Dianti, S.Pd., M.Pd., Gr.</td></tr></table>`,
+    tj: `<p>Di akhir petualangan ini, kamu mampu:</p>${TP_LIST.map(t => `<div class="tp"><b>${t[0]}</b><span>${fx(t[1])}<br>${(TP_M[t[0]] || []).map(i => `<button class="btn sec" data-pm="${i}" style="min-height:40px;margin:6px 6px 0 0">📖 Materi ${i}</button>`).join('')}</span></div>`).join('')}`,
+    cb: `${[['Baca materi', 'Pelajari konsep lewat cerita, gambar, dan contoh. Tonton videonya bila tersedia.'], ['Kerjakan asesmen', 'Asesmen 1 dan 2 memberi umpan balik langsung. Boleh salah, kamu bisa mencoba lagi.'], ['Isi refleksi', 'Ceritakan apa yang sudah kamu pahami. Setelah itu dunia berikutnya terbuka.'], ['Hadapi Asesmen 3', 'Mode ujian ala TKA, berwaktu, dan dijaga sistem integritas. Nilai pertama menjadi nilai resmi.']].map((x, i) => `<div class="step"><i>${i + 1}</i><div><b>${x[0]}</b><br>${x[1]}</div></div>`).join('')}`,
+    pm: `<p>Pikirkan dulu sebelum belajar. Tidak ada jawaban yang salah di sini:</p>${PEMANTIK.map((q, i) => `<div class="pm"><b>${i + 1}.</b> ${fx(q)}</div>`).join('')}`
+  };
+  const T = [['id', '🪪', 'Identitas'], ['tj', '🎯', 'Tujuan Belajar'], ['cb', '🧠', 'Cara Belajar'], ['pm', '🌏', 'Pertanyaan Pemantik']];
+  M.innerHTML = `<header class="top"><b>Hai, ${esc(S.nama)}! 👋</b></header><main class="wrap"><section><div class="card" style="display:flex;gap:14px;align-items:center">${pizi('wave', 84)}<div><h2 style="margin:0">Petualangan Pecahan Lanjutan</h2><p style="margin:4px 0 0">Kenali dulu petualanganmu, lalu mulai belajar.</p></div></div>
+  <div class="card" style="margin-top:14px"><div class="tabs" role="tablist">${T.map((t, i) => `<button role="tab" data-b="${t[0]}" class="${i ? '' : 'on'}"><span aria-hidden="true">${t[1]}</span> ${t[2]}</button>`).join('')}</div><div id="pn">${tab.id}</div></div>
+  <p style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="bm">📖 Mulai dari Materi</button><button class="btn sec" id="ba">🗺️ Lihat Peta Asesmen</button></p></section></main>${nav('beranda')}`;
+  M.querySelectorAll('[data-b]').forEach(b => b.onclick = () => { M.querySelectorAll('[data-b]').forEach(x => x.classList.toggle('on', x === b)); document.getElementById('pn').innerHTML = tab[b.dataset.b]; pasangPelajari(M); });
+  document.getElementById('bm').onclick = materi; document.getElementById('ba').onclick = peta; pasangNav();
+}
+
+</script>
+<script>
+// ===== Materi: halaman, mesin "video" animasi bernarasi, visual pecahan, bagian bertahap =====
+const CL = { a: '#ff8a3d', b: '#1fb5a8', c: '#7c4dcc', d: '#e11d74', g: '#3E8E2F', y: '#FFC93C', x: '#e5e0f5' };
+const gcd = (a, b) => b ? gcd(b, a % b) : Math.abs(a), lcm = (a, b) => a / gcd(a, b) * b;
+const Fh = (a, b) => frH('', a, b), Mx = (w, a, b) => frH(w, a, b), $id = i => document.getElementById(i);
+const hlk = h => String(h).split(/(<[^>]+>)/).map(p => p[0] === '<' ? p : p.replace(/\b(pembilang|penyebut)\b/gi, w => `<mark class="${w.toLowerCase() === 'pembilang' ? 'pb2' : 'pn3'}">${w}</mark>`)).join('');
+const dsc = x => String(x).replace('.', ',');
+// ---------- visual ----------
+function bar(n, rg, o) {
+  o = o || {}; const W = 300, H = o.h || 44, c = W / n; let s = `<svg class="vb" viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.al || 'batang pecahan'}">`;
+  for (let i = 0; i < n; i++) { let col = '#fff', k = ''; (rg || []).forEach(r => { if (i >= r[0] && i < r[1]) { col = CL[r[2]] || r[2]; k = r[2]; } }); const on = col !== '#fff';
+    s += `<rect x="${i * c + 1.5}" y="2" width="${c - 3}" height="${H - 4}" rx="6" fill="${col}" ${k === 'x' ? 'fill-opacity=".9"' : ''} stroke="#7c4dcc" stroke-width="2" ${on ? `class="pp" style="animation-delay:${i * 50}ms"` : ''}/>`; }
+  return s + '</svg>';
+}
+const ROW = (lab, n, rg) => `<div class="br"><span class="bl">${lab}</span>${bar(n, rg)}</div>`;
+const STK = (...r) => `<div class="stk">${r.join('')}</div>`;
+function MULX(a, b, k, op) { op = op || '×'; const a2 = op === '×' ? a * k : a / k, b2 = op === '×' ? b * k : b / k; return `<div class="mx">${Fh(a, b)}<span class="ar">${op}${k}<br>${op}${k}</span><b>=</b>${Fh(a2, b2)}</div>`; }
+function piz(n, taken, col) {
+  let s = '<svg class="vp" viewBox="-110 -110 220 220" width="190" role="img" aria-label="pizza">';
+  for (let i = 0; i < n; i++) { const a = i / n * 6.2832 - 1.5708, b = (i + 1) / n * 6.2832 - 1.5708, m = (a + b) / 2, P = `M0 0L${96 * Math.cos(a)} ${96 * Math.sin(a)}A96 96 0 0 1 ${96 * Math.cos(b)} ${96 * Math.sin(b)}Z`, on = taken.includes(i);
+    s += `<path d="${P}" fill="${on ? (CL[col] || '#ffb347') : '#f3e2bd'}" stroke="#c0702a" stroke-width="3" ${on ? `class="pp" style="animation-delay:${i * 70}ms"` : ''}/><circle cx="${58 * Math.cos(m)}" cy="${58 * Math.sin(m)}" r="6" fill="${on ? '#d62828' : '#e6cf9d'}"/>`; }
+  return s + '</svg>';
+}
+function nline(den, marks, mx) {
+  mx = mx || 1; let t = ''; for (let i = 0; i <= den * mx; i++) t += `<i style="left:${i / (den * mx) * 100}%"></i>`;
+  return `<div class="nl"><div class="nlb">${t}</div>${marks.map((m, i) => `<b style="left:${m[0] / mx * 100}%;--c:${CL[m[2]] || m[2]};animation-delay:${i * 150}ms">${m[1]}</b>`).join('')}<span class="n0">0</span><span class="n1">${mx}</span></div>`;
+}
+function area(R, C, a, c) {
+  const W = 240, H = 170, cw = W / C, ch = H / R; let s = `<svg class="va" viewBox="0 0 ${W + 4} ${H + 4}" role="img" aria-label="model luas perkalian pecahan">`;
+  for (let r = 0; r < R; r++) for (let k = 0; k < C; k++) { const ra = r < a, ca = k < c, f = ra && ca ? CL.c : ra ? CL.a : ca ? CL.b : '#fff';
+    s += `<rect x="${k * cw + 2}" y="${r * ch + 2}" width="${cw}" height="${ch}" fill="${f}" fill-opacity="${ra && ca ? 1 : (ra || ca) ? .5 : 1}" stroke="#7c4dcc" stroke-width="1.5" ${ra && ca ? `class="pp" style="animation-delay:${(r * C + k) * 40}ms"` : ''}/>`; }
+  return s + '</svg>';
+}
+function g100(n, m) {
+  let s = '<div class="g100">'; for (let i = 0; i < 100; i++) s += `<u class="${i < n ? 'on' : (m && i < n + m ? 'g' : '')}" style="animation-delay:${i * 8}ms"></u>`; return s + '</div>';
+}
+// ---------- mesin video ----------
+const MV = { run: 0, pz: false };
+function ucap(t) {
+  return String(t).replace(/<[^>]+>/g, ' ').replace(/(\d+)\s+(\d+)\/(\d+)/g, '$1 $2 per $3').replace(/(\d+)\/(\d+)/g, '$1 per $2').replace(/×/g, ' dikali ').replace(/÷/g, ' dibagi ').replace(/\+/g, ' ditambah ').replace(/[−–]/g, ' dikurangi ').replace(/=/g, ' sama dengan ').replace(/>/g, ' lebih dari ').replace(/</g, ' kurang dari ').replace(/%/g, ' persen').replace(/Rp\s?([\d.]+)/g, (m, n) => n.replace(/\./g, '') + ' rupiah').replace(/\s+/g, ' ').trim();
+}
+function say(t) {
+  return new Promise(r => {
+    const txt = ucap(t); let n = Math.max(2400, txt.length * 80 + 1400), d = 0; const f = () => { if (!d) { d = 1; clearInterval(iv); r(); } };
+    const iv = setInterval(() => { if (!MV.pz && (n -= 200) <= 0) f(); }, 200);
+    if (!Suara.sfx || !window.speechSynthesis) return;
+    try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(txt); u.lang = 'id-ID'; u.rate = .92; u.onend = f; u.onerror = f; speechSynthesis.speak(u); n += 3000; } catch (e) {}
+  });
+}
+function hentiNarasi() { MV.run++; MV.pz = false; try { window.speechSynthesis && speechSynthesis.cancel(); } catch (e) {} }
+function jedaVideo() {
+  MV.pz = !MV.pz; try { window.speechSynthesis && (MV.pz ? speechSynthesis.pause() : speechSynthesis.resume()); } catch (e) {}
+  const b = $id('vp'); if (b) b.textContent = MV.pz ? '▶ Lanjut' : '⏸ Jeda';
+}
+function tanya(a, t) {
+  return new Promise(res => {
+    const box = $id('vq'); if (!box) return res();
+    box.innerHTML = `<div class="ask"><b>✋ Giliranmu mencoba!</b><p>${fh(a.q)}</p><div>${a.o.map((x, i) => `<button class="opt" data-i="${i}">${fh(x)}</button>`).join('')}</div><div id="vf"></div></div>`;
+    say(a.s || a.q);
+    box.querySelectorAll('[data-i]').forEach(b => b.onclick = () => {
+      const i = +b.dataset.i, ok = i === a.k; box.querySelectorAll('[data-i]').forEach((x, j) => { x.disabled = true; if (j === a.k) x.classList.add('ok'); else if (j === i) x.classList.add('no'); });
+      mainkan(ok ? 'benar' : 'salah'); $id('vf').innerHTML = `<div class="bx">${ok ? '🎉 <b>Hebat sekali!</b>' : '👏 <b>Terima kasih sudah mencoba!</b>'}<br>${fh(a.e)}</div><button class="btn" id="vl">Lanjutkan penjelasan ▶</button>`;
+      $id('vl').onclick = () => { box.innerHTML = ''; res(); };
+    });
+  });
+}
+async function putarVideo(frames, kunci) {
+  hentiNarasi(); const t = MV.run; const z = $id('vz'), c = $id('cap'); if (!z) return;
+  $id('vb').textContent = '🔁 Ulang'; $id('vp').disabled = false; $id('vp').textContent = '⏸ Jeda'; $id('vq').innerHTML = '';
+  for (let i = 0; i < frames.length; i++) {
+    if (t !== MV.run || !$id('vz')) return; const f = frames[i];
+    z.innerHTML = f.v; c.innerHTML = hlk(fh(f.c)); $id('vpg').innerHTML = frames.map((_, k) => `<i class="${k < i ? 'd' : k === i ? 'c' : ''}"></i>`).join('');
+    if (i) mainkan('klik'); if (f.ask) { await tanya(f.ask, t); if (t !== MV.run) return; }
+    await say(f.s || f.c);
+  }
+  if (t !== MV.run || !$id('vz')) return; mainkan('benar'); $id('vpg').innerHTML = frames.map(() => '<i class="d"></i>').join(''); videoSelesai(kunci);
+}
+let MTS = null;
+function videoSelesai() { if (MTS && !MTS.vid) { MTS.vid = 1; bukaSec(1); } }
+function bukaSec(k) { const e = $id('ms' + k); if (e) { e.style.display = 'block'; e.classList.remove('cl'); setTimeout(() => e.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60); } }
+// ---------- progres materi ----------
+const MK = () => 'pp_mt_' + (S.nama || '');
+const mtDone = () => { try { return JSON.parse(localStorage[MK()] || '[]'); } catch (e) { return []; } };
+function mtTandai(id) { const l = mtDone(); if (!l.includes(id)) { l.push(id); try { localStorage[MK()] = JSON.stringify(l); } catch (e) {} } }
+// ---------- daftar materi ----------
+const DUNIA_N = ['Dunia 1: Pantai Hijau', 'Dunia 2: Pulau Senja', 'Dunia 3: Samudra Biru'];
+async function materi() {
+  if (isGuru()) return guruPanel(); hentiNarasi(); document.body.classList.remove('exam', 'guru'); const sel = mtDone();
+  M.innerHTML = `<header class="top"><b>📖 Materi</b><span class="chip">${sel.length}/${MT.length} selesai</span></header><main class="wrap"><section>
+  <div class="card" style="display:flex;gap:14px;align-items:center">${pizi('wave', 80)}<div><h2 style="margin:0">Materi Pecahan Lanjutan</h2><p style="margin:4px 0 0">Setiap materi punya <b>video animasi bernarasi</b>, contoh, latihan interaktif, dan cek pemahaman. Belajar dulu, lalu kerjakan asesmen di Peta.</p></div></div>
+  ${[0, 1, 2].map(d => `<div class="world w${d + 1}"><h3>${DUNIA_N[d]}</h3>${MT.filter(m => m.d === d).map(m => `<div class="node ${sel.includes(m.id) ? 'done' : 't'}"><div class="mi" style="--c:${COL_D[d]}">${m.ic}</div><div style="flex:1"><h3 style="margin:0">Materi ${m.id}: ${esc(m.t)}</h3><small>${esc(m.tp)} • ±${m.mnt} menit • ${esc(m.sub)}</small></div><span class="badge">${sel.includes(m.id) ? '✅ Selesai' : '▶ Belum'}</span><button class="btn" data-m="${m.id}">${sel.includes(m.id) ? 'Ulangi' : 'Mulai'}</button></div>`).join('')}</div>`).join('')}
+  </section></main>${nav('materi')}`;
+  M.querySelectorAll('[data-m]').forEach(b => b.onclick = () => materiHalaman(+b.dataset.m)); pasangNav();
+}
+const COL_D = ['#3E9B5F', '#F29A1F', '#2E9BD6'];
+function materiHalaman(id) {
+  hentiNarasi(); const m = MT.find(x => x.id === id), done = mtDone().includes(id); MTS = { id, vid: done, cek: 0 };
+  const SEC = [
+    ['📝', m.langkah.judul, `${m.langkah.contoh}<ol class="steps">${m.langkah.steps.map(s => `<li>${fh(s)}</li>`).join('')}</ol>`, '#ff8a3d'],
+    ['🧪', 'Coba sendiri!', '<div id="ow"></div>', '#1fb5a8'],
+    ['🌍', 'Contoh di kehidupan sehari-hari', m.contoh.map(c => `<div class="cx"><span>${c[0]}</span><p>${fh(c[1])}</p></div>`).join(''), '#7c4dcc'],
+    ['🧠', 'Cek pemahaman', m.cek.map((q, i) => `<div class="cq" data-q="${i}"><p><b>${i + 1}.</b> ${fh(q.q)}</p>${q.o.map((o, j) => `<button class="opt" data-j="${j}">${fh(o)}</button>`).join('')}<div class="cf"></div></div>`).join(''), '#e11d74'],
+    ['⭐', 'Ingat!', `<p>${fh(m.ingat)}</p>`, '#f5b301']];
+  M.innerHTML = `<header class="top"><button class="btn sec" id="mb" style="min-height:40px">← Daftar materi</button><b>Materi ${m.id}</b></header><main class="wrap mat"><section>
+  <div class="card mhead" style="--c:${COL_D[m.d]}"><div class="mi big" style="--c:${COL_D[m.d]}">${m.ic}</div><div><span class="tag">${esc(m.tp)} • ${DUNIA_N[m.d]}</span><h2 style="margin:6px 0">${esc(m.t)}</h2><p style="margin:0">🎯 ${fh(m.tujuan)}</p></div></div>
+  <div class="msec" style="--c:#ff8a3d"><div class="hd"><span class="ib">💡</span><b>${esc(m.konsepJudul)}</b></div><div class="sb">${fh(hlk(m.konsep))}</div></div>
+  <div class="card vid"><b>🎬 Video penjelasan</b><div class="vscr" id="vz">${m.cover || '<p>Tekan <b>Putar Video</b> untuk menonton penjelasan animasi bernarasi.</p>'}</div><div class="vcap" id="cap">Tekan tombol untuk memutar. Suara narasi bisa dimatikan lewat tombol 🔊.</div><div id="vq"></div><div class="vctl"><button class="btn" id="vb">▶ Putar Video</button><button class="btn sec" id="vp" disabled>⏸ Jeda</button><span class="vpg" id="vpg"></span></div><details><summary>📄 Baca teks narasi</summary><ol>${m.vid().map(f => `<li>${fh(f.s || f.c)}</li>`).join('')}</ol></details></div>
+  <div id="rest">${SEC.map((s, i) => `<div class="msec" id="ms${i + 1}" style="--c:${s[3]};display:${done || i === 0 && MTS.vid ? 'block' : 'none'}"><div class="hd" onclick="this.parentNode.classList.toggle('cl')"><span class="ib">${s[0]}</span><b>${s[1]}</b><i>▾</i></div><div class="sb">${s[2]}${done || i === SEC.length - 1 ? '' : `<div class="ct"><button class="btn" data-nx="${i + 2}" ${i === 3 ? 'disabled' : ''}>Mengerti, lanjut ▶</button></div>`}</div></div>`).join('')}</div>
+  <div class="ct"><button class="btn" id="mfin" ${done ? '' : 'disabled'}>Selesai ✓</button></div></section></main>${nav('materi')}`;
+  pasangNav(); $id('mb').onclick = () => { hentiNarasi(); materi(); };
+  const frames = m.vid(); $id('vb').onclick = () => putarVideo(frames); $id('vp').onclick = jedaVideo;
+  M.querySelectorAll('[data-nx]').forEach(b => b.onclick = () => { const n = +b.dataset.nx; b.remove(); bukaSec(n); if (n === 5 && MTS.cek >= m.cek.length) $id('mfin').disabled = false; });
+  M.querySelectorAll('.cq').forEach(box => box.querySelectorAll('[data-j]').forEach(b => b.onclick = () => {
+    const q = m.cek[+box.dataset.q], j = +b.dataset.j; if (box.dataset.d) return; box.dataset.d = 1; const ok = j === q.k;
+    box.querySelectorAll('[data-j]').forEach((x, i) => { x.disabled = true; if (i === q.k) x.classList.add('ok'); else if (i === j) x.classList.add('no'); });
+    box.querySelector('.cf').innerHTML = `<div class="bx">${ok ? '🎉 <b>Tepat!</b>' : '💭 <b>Belum tepat.</b>'} ${fh(q.e)}</div>`; mainkan(ok ? 'benar' : 'salah'); MTS.cek++;
+    if (MTS.cek >= m.cek.length) { const nb = document.querySelector('#ms4 [data-nx]'); if (nb) nb.disabled = false; $id('mfin').disabled = false; }
+  }));
+  $id('mfin').onclick = () => { mtTandai(id); hentiNarasi(); mainkan('sorak'); toast('Materi ' + id + ' selesai! 🎉'); const nx = MT.find(x => x.id === id + 1); nx ? materiHalaman(id + 1) : materi(); window.scrollTo(0, 0); };
+  if (done) { WD[m.wd]($id('ow')); } else { const o = new MutationObserver(() => { if ($id('ow') && !$id('ow').dataset.i) { $id('ow').dataset.i = 1; WD[m.wd]($id('ow')); } }); o.observe($id('rest'), { subtree: true, attributes: true }); }
+  if (done && $id('ow')) $id('ow').dataset.i = 1;
+  if (!done) setTimeout(() => { const ow = $id('ow'); if (ow && !ow.dataset.i) { ow.dataset.i = 1; WD[m.wd](ow); } }, 50);
+}
+
+</script>
+<script>
+// ===== Isi 6 materi lanjutan + widget interaktif =====
+const fr_ = (v, c, s, ask) => ({ v, c, s: s || c, ask });
+const LN = (...l) => `<div class="lns">${l.map(x => `<div class="ln">${x}</div>`).join('')}</div>`;
+const rp = n => 'Rp' + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+const mix = (n, d) => { const g = gcd(n, d); n /= g; d /= g; const w = Math.floor(n / d), r = n % d; return !r ? String(w) : (w ? Mx(w, r, d) : Fh(r, d)); };
+const PZR = (...x) => `<div class="pzr">${x.join('')}</div>`;
+const RING = t => `<div class="ring2">${t}</div>`;
+const MT = [
+{ id: 1, d: 0, ic: '🍕', t: 'Pecahan Senilai & Bentuk Sederhana', sub: 'bentuk berbeda, nilai sama', tp: 'TP-1', mnt: 12, wd: 'senilai',
+  tujuan: 'Kamu dapat menentukan pecahan senilai dan menyederhanakan pecahan dengan benar.',
+  cover: PZR(piz(2, [0], 'a'), piz(4, [0, 1], 'a'), piz(8, [0, 1, 2, 3], 'a')),
+  konsepJudul: 'Apa itu pecahan senilai?',
+  konsep: `<p>Satu pizza kamu makan <b>1/2</b> bagian. Temanmu memotong pizza yang sama menjadi 4 bagian dan makan <b>2/4</b> bagian. Siapa yang makan lebih banyak? Ternyata <b>sama banyak</b>! Pecahan yang tulisannya berbeda tetapi nilainya sama disebut <b>pecahan senilai</b>.</p><p>Setiap pecahan punya <b>pembilang</b> (bagian yang diambil) dan <b>penyebut</b> (banyak bagian seluruhnya). Jika pembilang dan penyebut dikali, atau dibagi, dengan bilangan yang sama (bukan nol), nilai pecahan <b>tidak berubah</b>.</p><p>Pecahan yang sudah tidak dapat dibagi lagi disebut <b>bentuk paling sederhana</b>. Cara mendapatkannya: bagi pembilang dan penyebut dengan <b>FPB</b> (faktor persekutuan terbesar).</p>`,
+  vid: () => [
+    fr_(piz(2, [0], 'a'), '① Sebuah pizza dibagi menjadi <b>2</b> bagian sama besar. Kita ambil <b>1</b> bagian. Itulah 1/2.', 'Sebuah pizza dibagi menjadi dua bagian sama besar. Kita ambil satu bagian. Itulah 1/2.'),
+    fr_(STK(ROW(Fh(1, 2), 2, [[0, 1, 'a']]), ROW(Fh(2, 4), 4, [[0, 2, 'a']])), '② Setiap bagian dibelah dua lagi. Sekarang ada <b>4</b> bagian dan yang diambil <b>2</b> bagian: 2/4. Bagian pizza yang kita ambil <b>tidak berubah</b>!', 'Sekarang setiap bagian dibelah dua lagi. Ada empat bagian, dan yang kita ambil dua bagian, yaitu 2/4. Ukuran pizza yang kita ambil tidak berubah.'),
+    fr_(STK(ROW(Fh(1, 2), 2, [[0, 1, 'a']]), ROW(Fh(2, 4), 4, [[0, 2, 'a']]), ROW(Fh(4, 8), 8, [[0, 4, 'a']])), '③ Dibelah lagi menjadi 8 bagian, diambil 4 bagian: 4/8. Jadi <b>1/2 = 2/4 = 4/8</b>. Inilah <b>pecahan senilai</b>!', 'Dibelah lagi menjadi delapan bagian, diambil empat bagian, yaitu 4/8. Jadi 1/2 sama dengan 2/4 sama dengan 4/8. Inilah pecahan senilai.'),
+    fr_(MULX(1, 2, 2), '④ Rahasianya: kalikan <b>pembilang</b> dan <b>penyebut</b> dengan bilangan yang sama. 1 × 2 = 2 dan 2 × 2 = 4, jadi 1/2 = 2/4.', 'Rahasianya, kalikan pembilang dan penyebut dengan bilangan yang sama. 1 dikali 2 sama dengan 2, dan 2 dikali 2 sama dengan 4. Jadi 1/2 sama dengan 2/4.'),
+    fr_(MULX(3, 5, 4), '⑤ Contoh lain: 3/5 dikali 4 pada atas dan bawah. 3 × 4 = 12 dan 5 × 4 = 20, jadi 3/5 = 12/20.', 'Contoh lain. 3/5, atas dan bawah dikali 4. 3 dikali 4 sama dengan 12, dan 5 dikali 4 sama dengan 20. Jadi 3/5 sama dengan 12/20.'),
+    fr_(ROW(Fh(6, 12), 12, [[0, 6, 'a']]) + MULX(6, 12, 6, '÷') + ROW(Fh(1, 2), 2, [[0, 1, 'a']]), '⑥ Kebalikannya: <b>menyederhanakan</b>. FPB dari 6 dan 12 adalah 6. 6 ÷ 6 = 1 dan 12 ÷ 6 = 2, jadi 6/12 = 1/2 (paling sederhana).', 'Kebalikannya adalah menyederhanakan. FPB dari 6 dan 12 adalah 6. 6 dibagi 6 sama dengan 1, dan 12 dibagi 6 sama dengan 2. Jadi 6/12 sama dengan 1/2, bentuk paling sederhana.'),
+    fr_(ROW(Fh(3, 4), 4, [[0, 3, 'b']]), '⑦ Giliranmu! Perhatikan 3/4.', 'Sekarang giliranmu. Perhatikan pecahan 3/4.', { q: 'Mana yang senilai dengan 3/4?', o: ['6/8', '4/5', '3/8'], k: 0, e: '3/4 dikali 2 pada atas dan bawah: 6/8. Pilihan lain nilainya berbeda.' }),
+    fr_(RING('<b>Ingat!</b><br>Senilai: <b>kali / bagi</b> atas dan bawah dengan bilangan yang sama.<br>Sederhana: bagi dengan <b>FPB</b>.'), '⑧ Rangkuman: pecahan senilai diperoleh dengan mengali atau membagi pembilang dan penyebut dengan bilangan yang sama. Bentuk paling sederhana diperoleh dengan membagi memakai FPB.', 'Rangkuman. Pecahan senilai diperoleh dengan mengali atau membagi pembilang dan penyebut dengan bilangan yang sama. Bentuk paling sederhana diperoleh dengan membagi memakai FPB.')],
+  langkah: { judul: 'Langkah menentukan pecahan senilai & menyederhanakan', contoh: `<div class="ex">Contoh: tentukan pecahan senilai 2/3 berpenyebut 12, lalu sederhanakan 18/24.</div>`,
+    steps: ['<b>Senilai:</b> cari pengali penyebut. 3 × <b>4</b> = 12, jadi pembilang juga dikali 4.', '2 × 4 = 8, sehingga <b>2/3 = 8/12</b>.', '<b>Menyederhanakan 18/24:</b> cari FPB dari 18 dan 24, yaitu <b>6</b>.', '18 ÷ 6 = 3 dan 24 ÷ 6 = 4, jadi <b>18/24 = 3/4</b> (tidak bisa dibagi lagi).'] },
+  contoh: [['⏰', '1/2 jam = 30 menit, 2/4 jam = 30 menit, dan 30/60 jam = 30 menit. Semuanya senilai!'], ['🥛', 'Setengah gelas susu (1/2) sama banyak dengan 4 dari 8 bagian gelas ukur (4/8).'], ['💵', 'Uang Rp5.000 dari Rp10.000 adalah 5/10 = 1/2 dari seluruh uang.']],
+  cek: [{ q: 'Pecahan yang senilai dengan 2/5 adalah...', o: ['4/10', '4/5', '2/10'], k: 0, e: '2/5 dikali 2 pada atas dan bawah menjadi 4/10.' }, { q: 'Bentuk paling sederhana dari 12/16 adalah...', o: ['6/8', '3/4', '4/3'], k: 1, e: 'FPB 12 dan 16 adalah 4. 12 ÷ 4 = 3 dan 16 ÷ 4 = 4, jadi 3/4. (6/8 belum paling sederhana.)' }, { q: 'Mana yang TIDAK senilai dengan 1/3?', o: ['2/6', '3/9', '4/9'], k: 2, e: '1/3 = 2/6 = 3/9. Pecahan 4/9 nilainya berbeda.' }],
+  ingat: 'Pecahan senilai: <b>kali atau bagi</b> pembilang dan penyebut dengan bilangan yang sama (bukan nol). Bentuk paling sederhana: bagi pembilang dan penyebut dengan <b>FPB</b>.' },
+{ id: 2, d: 0, ic: '⚖️', t: 'Membandingkan & Mengurutkan Pecahan', sub: 'pecahan, desimal, persen', tp: 'TP-2', mnt: 14, wd: 'banding',
+  tujuan: 'Kamu dapat membandingkan dan mengurutkan pecahan, desimal, dan persen.',
+  cover: STK(ROW(Fh(3, 8), 8, [[0, 3, 'a']]), ROW(Fh(5, 8), 8, [[0, 5, 'b']])),
+  konsepJudul: 'Bagaimana membandingkan pecahan?',
+  konsep: `<p>Mana lebih besar, <b>3/8</b> atau <b>5/8</b>? Kalau <b>penyebutnya sama</b>, kita tinggal membandingkan <b>pembilangnya</b>: 5 &gt; 3, jadi 5/8 &gt; 3/8.</p><p>Kalau <b>penyebutnya berbeda</b>, <b>samakan dulu penyebutnya</b> dengan KPK, baru bandingkan pembilangnya. Contoh 1/2 dan 2/3: KPK = 6, jadi 3/6 dan 4/6. Karena 3 &lt; 4, maka 1/2 &lt; 2/3.</p><p>Cara lain: ubah semuanya ke <b>desimal</b> atau <b>persen</b>. Misalnya 3/4 = 0,75 = 75%. Untuk mengurutkan, bandingkan semuanya lalu susun dari yang <b>terkecil</b> ke <b>terbesar</b> (atau sebaliknya).</p>`,
+  vid: () => [
+    fr_(STK(ROW(Fh(3, 8), 8, [[0, 3, 'a']]), ROW(Fh(5, 8), 8, [[0, 5, 'b']])), '① Penyebut <b>sama</b> (8): bandingkan <b>pembilang</b>. 5 &gt; 3, jadi 5/8 &gt; 3/8. Batang 5/8 lebih panjang.', 'Penyebutnya sama, yaitu 8. Jadi kita bandingkan pembilangnya. 5 lebih dari 3, jadi 5/8 lebih dari 3/8. Batang 5/8 lebih panjang.'),
+    fr_(STK(ROW(Fh(1, 2), 2, [[0, 1, 'a']]), ROW(Fh(2, 3), 3, [[0, 2, 'b']])), '② Bagaimana dengan 1/2 dan 2/3? Penyebutnya <b>berbeda</b>, potongannya tidak sama besar. Kita perlu menyamakannya.', 'Bagaimana dengan 1/2 dan 2/3? Penyebutnya berbeda, jadi potongannya tidak sama besar. Kita perlu menyamakan penyebutnya.'),
+    fr_(STK(ROW(Fh(3, 6), 6, [[0, 3, 'a']]), ROW(Fh(4, 6), 6, [[0, 4, 'b']])), '③ KPK dari 2 dan 3 adalah <b>6</b>. 1/2 = 3/6 dan 2/3 = 4/6. Sekarang penyebutnya sama!', 'KPK dari 2 dan 3 adalah 6. 1/2 sama dengan 3/6, dan 2/3 sama dengan 4/6. Sekarang penyebutnya sama.'),
+    fr_(`<div class="cmp">${Fh(1, 2)} <b>&lt;</b> ${Fh(2, 3)}</div>`, '④ Karena 3/6 &lt; 4/6, maka <b>1/2 &lt; 2/3</b>.', 'Karena 3/6 kurang dari 4/6, maka 1/2 kurang dari 2/3.'),
+    fr_(`<div class="mx">${Fh(3, 4)}<b>=</b><span class="big">0,75</span><b>=</b><span class="big">75%</span></div><div class="mx">${Fh(7, 10)}<b>=</b><span class="big">0,7</span><b>=</b><span class="big">70%</span></div>`, '⑤ Cara lain: ubah ke <b>desimal</b> atau <b>persen</b>. 3/4 = 0,75 = 75% dan 7/10 = 0,7 = 70%. Karena 75% &gt; 70%, maka 3/4 &gt; 7/10.', 'Cara lain, ubah ke desimal atau persen. 3/4 sama dengan 0,75 atau 75 persen, dan 7/10 sama dengan 0,7 atau 70 persen. Karena 75 persen lebih dari 70 persen, maka 3/4 lebih dari 7/10.'),
+    fr_(nline(8, [[.25, Fh(1, 4), 'a'], [.5, Fh(1, 2), 'b'], [.625, Fh(5, 8), 'c'], [.75, Fh(3, 4), 'd']]), '⑥ Garis bilangan: makin ke <b>kanan</b> makin <b>besar</b>. Urutan dari terkecil: 1/4, 1/2, 5/8, 3/4.', 'Pada garis bilangan, makin ke kanan nilainya makin besar. Urutan dari yang terkecil: 1/4, 1/2, 5/8, 3/4.'),
+    fr_(STK(ROW(Fh(3, 5), 5, [[0, 3, 'a']]), ROW(Fh(5, 8), 8, [[0, 5, 'b']])), '⑦ Giliranmu! Bandingkan 3/5 dan 5/8.', 'Giliranmu. Bandingkan 3/5 dan 5/8.', { q: 'Mana yang lebih besar, 3/5 atau 5/8?', o: ['3/5', '5/8', 'Sama besar'], k: 1, e: 'KPK 5 dan 8 adalah 40. 3/5 = 24/40 dan 5/8 = 25/40. Karena 25 &gt; 24, 5/8 lebih besar.' }),
+    fr_(RING('<b>Ingat!</b><br>Penyebut sama → banding <b>pembilang</b>.<br>Penyebut beda → samakan dengan <b>KPK</b>.<br>Atau ubah ke <b>desimal / persen</b>.'), '⑧ Rangkuman: penyebut sama, bandingkan pembilang. Penyebut berbeda, samakan dengan KPK. Atau ubah ke desimal atau persen.', 'Rangkuman. Penyebut sama, bandingkan pembilangnya. Penyebut berbeda, samakan dengan KPK. Atau ubah ke desimal atau persen.')],
+  langkah: { judul: 'Langkah membandingkan & mengurutkan pecahan', contoh: `<div class="ex">Contoh: urutkan 0,4 ; 3/8 ; 45% dari yang terkecil.</div>`,
+    steps: ['Pilih <b>satu bentuk</b> yang sama, misalnya desimal.', '3/8 = 3 ÷ 8 = <b>0,375</b>; 0,4 tetap <b>0,4</b>; 45% = <b>0,45</b>.', 'Bandingkan: 0,375 &lt; 0,4 &lt; 0,45.', 'Urutan dari terkecil: <b>3/8 ; 0,4 ; 45%</b>.'] },
+  contoh: [['🔋', 'Baterai ponsel A tersisa 3/5 dan ponsel B tersisa 2/3. Ponsel B masih lebih penuh (10/15 &gt; 9/15).'], ['🏃', 'Rani berlari 3/4 km dan Sita berlari 0,7 km. Rani berlari lebih jauh (0,75 &gt; 0,7).'], ['🛍️', 'Diskon 1/4 sama dengan 25%, jadi diskon 30% lebih besar daripada diskon 1/4.']],
+  cek: [{ q: 'Pernyataan yang benar adalah...', o: ['2/5 > 1/2', '3/4 > 2/3', '1/3 > 1/2'], k: 1, e: '3/4 = 9/12 dan 2/3 = 8/12, jadi 3/4 &gt; 2/3.' }, { q: '0,6 sama dengan ... persen.', o: ['6%', '60%', '0,6%'], k: 1, e: '0,6 = 6/10 = 60/100 = 60%.' }, { q: 'Urutan terkecil ke terbesar dari 1/2, 1/4, 3/4 adalah...', o: ['1/4, 1/2, 3/4', '1/2, 1/4, 3/4', '3/4, 1/2, 1/4'], k: 0, e: '1/4 = 0,25; 1/2 = 0,5; 3/4 = 0,75. Urutan: 1/4, 1/2, 3/4.' }],
+  ingat: 'Penyebut sama: bandingkan <b>pembilang</b>. Penyebut berbeda: samakan dengan <b>KPK</b>, atau ubah ke <b>desimal/persen</b>. Mengurutkan: bandingkan semuanya lalu susun dari kecil ke besar.' },
+{ id: 3, d: 1, ic: '➕', t: 'Penjumlahan Pecahan', sub: 'penyebut sama, beda, dan campuran', tp: 'TP-3', mnt: 15, wd: 'tambah',
+  tujuan: 'Kamu dapat menjumlahkan pecahan berpenyebut sama maupun berbeda, termasuk pecahan campuran.',
+  cover: STK(ROW(Fh(1, 2), 6, [[0, 3, 'a']]), ROW(Fh(1, 3), 6, [[0, 2, 'b']])),
+  konsepJudul: 'Bagaimana menjumlahkan pecahan?',
+  konsep: `<p>Kalau <b>penyebutnya sama</b>, jumlahkan <b>pembilangnya</b> saja, <b>penyebutnya tetap</b>. Contoh 1/4 + 2/4 = 3/4. Artinya 1 potong ditambah 2 potong sama besar menjadi 3 potong.</p><p>Kalau <b>penyebutnya berbeda</b>, potongannya tidak sama besar sehingga belum bisa dijumlahkan. <b>Samakan dulu penyebutnya</b> dengan KPK, baru jumlahkan pembilangnya. Contoh 1/2 + 1/3 = 3/6 + 2/6 = 5/6.</p><p>Untuk <b>pecahan campuran</b>, jumlahkan bagian bulatnya, lalu jumlahkan bagian pecahannya. Jika pecahan hasilnya lebih dari 1, ubah menjadi campuran dan gabungkan dengan bagian bulatnya.</p>`,
+  vid: () => [
+    fr_(STK(ROW(Fh(1, 4), 4, [[0, 1, 'a']]), ROW('+ ' + Fh(2, 4), 4, [[1, 3, 'b']]), ROW('= ' + Fh(3, 4), 4, [[0, 1, 'a'], [1, 3, 'b']])), '① 1/4 + 2/4. Potongannya <b>sama besar</b>, jadi tinggal digabung: 1 potong + 2 potong = 3 potong, yaitu 3/4.', 'Satu per empat ditambah dua per empat. Potongannya sama besar, jadi tinggal digabung. Satu potong ditambah dua potong sama dengan tiga potong, yaitu tiga per empat.'),
+    fr_(`<div class="mx">${Fh(1, 4)}<b>+</b>${Fh(2, 4)}<b>=</b>${Fh('1+2', 4)}<b>=</b>${Fh(3, 4)}</div>`, '② Aturannya: penyebut sama → jumlahkan <b>pembilang</b>, <b>penyebut</b> tetap 4. Penyebut tidak ikut dijumlahkan!', 'Aturannya, penyebut sama, jumlahkan pembilangnya, dan penyebutnya tetap. Penyebut tidak ikut dijumlahkan.'),
+    fr_(STK(ROW(Fh(1, 2), 2, [[0, 1, 'a']]), ROW(Fh(1, 3), 3, [[0, 1, 'b']])), '③ Sekarang 1/2 + 1/3. Potongannya <b>tidak sama besar</b> (dibagi 2 dan dibagi 3), jadi belum bisa langsung dijumlahkan.', 'Sekarang 1/2 ditambah 1/3. Potongannya tidak sama besar, satu dibagi dua dan satu dibagi tiga, jadi belum bisa langsung dijumlahkan.'),
+    fr_(STK(ROW(Fh(3, 6), 6, [[0, 3, 'a']]), ROW(Fh(2, 6), 6, [[0, 2, 'b']])), '④ Samakan dengan <b>KPK</b> 2 dan 3 = <b>6</b>. 1/2 = 3/6 dan 1/3 = 2/6. Sekarang potongannya sama besar!', 'Samakan dengan KPK dari 2 dan 3, yaitu 6. 1/2 sama dengan 3/6, dan 1/3 sama dengan 2/6. Sekarang potongannya sama besar.'),
+    fr_(ROW(Fh(5, 6), 6, [[0, 3, 'a'], [3, 5, 'b']]) + `<div class="mx">${Fh(3, 6)}<b>+</b>${Fh(2, 6)}<b>=</b>${Fh(5, 6)}</div>`, '⑤ Jumlahkan: 3/6 + 2/6 = <b>5/6</b>.', 'Jumlahkan, 3/6 ditambah 2/6 sama dengan 5/6.'),
+    fr_(STK(ROW('Jawaban salah ' + Fh(2, 5), 5, [[0, 2, 'd']]), ROW('Padahal ' + Fh(1, 2) + ' saja', 2, [[0, 1, 'a']])), '⑥ <b>Awas kesalahan umum!</b> 1/2 + 1/3 ≠ 2/5. Hasil 2/5 lebih <b>kecil</b> daripada 1/2, mustahil karena ditambah malah mengecil. Penyebut tidak boleh dijumlahkan.', 'Awas kesalahan umum. Satu per dua ditambah satu per tiga bukan dua per lima. Dua per lima lebih kecil daripada satu per dua, mustahil karena ditambah malah mengecil. Penyebut tidak boleh dijumlahkan.'),
+    fr_(LN('2 1/4 + 1 2/3', 'Bulat: 2 + 1 = 3', 'Pecahan: 3/12 + 8/12 = 11/12', '<b>Hasil: 3 11/12</b>'), '⑦ <b>Pecahan campuran</b>: 2 1/4 + 1 2/3. Bulat: 2 + 1 = 3. Pecahan: 1/4 + 2/3 = 3/12 + 8/12 = 11/12. Hasil 3 11/12. Jika pecahannya lebih dari 1, ubah menjadi campuran lalu gabungkan.', 'Pecahan campuran, 2 1/4 ditambah 1 2/3. Bulatnya, 2 ditambah 1 sama dengan 3. Pecahannya, 1/4 ditambah 2/3 sama dengan 3/12 ditambah 8/12, yaitu 11/12. Hasilnya 3 11/12. Jika pecahannya lebih dari satu, ubah menjadi campuran lalu gabungkan.'),
+    fr_(STK(ROW(Fh(2, 3), 6, [[0, 4, 'a']]), ROW(Fh(1, 6), 6, [[4, 5, 'b']])), '⑧ Giliranmu! 2/3 + 1/6.', 'Giliranmu. 2/3 ditambah 1/6.', { q: 'Berapa hasil 2/3 + 1/6?', o: ['3/9', '5/6', '3/6'], k: 1, e: '2/3 = 4/6, jadi 4/6 + 1/6 = 5/6.' }),
+    fr_(RING('<b>Ingat!</b><br>Penyebut <b>sama</b>: jumlahkan pembilang.<br>Penyebut <b>beda</b>: samakan dengan KPK dulu.<br>Penyebut <b>tidak</b> dijumlahkan!'), '⑨ Rangkuman: penyebut sama, jumlahkan pembilang. Penyebut berbeda, samakan dengan KPK dulu. Penyebut tidak pernah dijumlahkan.', 'Rangkuman. Penyebut sama, jumlahkan pembilangnya. Penyebut berbeda, samakan dengan KPK dulu. Penyebut tidak pernah dijumlahkan.')],
+  langkah: { judul: 'Langkah menjumlahkan pecahan', contoh: `<div class="ex">Contoh: 3/4 + 5/6.</div>`,
+    steps: ['Cari <b>KPK</b> dari penyebut 4 dan 6, yaitu <b>12</b>.', 'Samakan: 3/4 = <b>9/12</b> dan 5/6 = <b>10/12</b>.', 'Jumlahkan pembilang: 9 + 10 = 19, jadi <b>19/12</b>.', 'Ubah ke campuran: 19/12 = <b>1 7/12</b>.'] },
+  contoh: [['🧁', 'Ibu memakai 3/4 kg tepung untuk kue lapis dan 1/2 kg untuk bolu. Total tepung 3/4 + 2/4 = 5/4 = 1 1/4 kg.'], ['🏃', 'Pagi berlari 1/2 km dan sore 1/3 km. Seluruhnya 3/6 + 2/6 = 5/6 km.'], ['🍕', 'Dika makan 1/3 pizza dan Ani 1/4 pizza. Yang dimakan 4/12 + 3/12 = 7/12 pizza.']],
+  cek: [{ q: '1/5 + 2/5 = ...', o: ['3/10', '3/5', '2/5'], k: 1, e: 'Penyebut sama, jumlahkan pembilang: 1 + 2 = 3, penyebut tetap 5. Jadi 3/5.' }, { q: '1/3 + 1/4 = ...', o: ['2/7', '7/12', '2/12'], k: 1, e: 'KPK 12: 4/12 + 3/12 = 7/12.' }, { q: '1 1/2 + 2 1/3 = ...', o: ['3 5/6', '3 2/5', '4 1/6'], k: 0, e: 'Bulat 1 + 2 = 3. Pecahan 3/6 + 2/6 = 5/6. Hasil 3 5/6.' }],
+  ingat: 'Penyebut sama: jumlahkan <b>pembilang</b>, penyebut tetap. Penyebut berbeda: samakan dengan <b>KPK</b> dulu. Campuran: jumlahkan bulat dan pecahan terpisah. Jangan jumlahkan penyebutnya!' },
+{ id: 4, d: 1, ic: '➖', t: 'Pengurangan Pecahan', sub: 'termasuk meminjam satu utuh', tp: 'TP-3', mnt: 15, wd: 'kurang',
+  tujuan: 'Kamu dapat mengurangkan pecahan berpenyebut sama dan berbeda, termasuk pecahan campuran yang perlu "meminjam".',
+  cover: STK(ROW(Fh(5, 6), 6, [[0, 5, 'a']]), ROW('− ' + Fh(2, 6), 6, [[3, 5, 'd']])),
+  konsepJudul: 'Bagaimana mengurangkan pecahan?',
+  konsep: `<p>Mengurangkan pecahan mirip dengan menjumlahkan. Kalau <b>penyebut sama</b>, kurangkan <b>pembilangnya</b>, penyebut tetap. Contoh 3/4 − 1/4 = 2/4 = 1/2.</p><p>Kalau <b>penyebut berbeda</b>, <b>samakan penyebut</b> dengan KPK dulu. Contoh 5/6 − 1/3 = 5/6 − 2/6 = 3/6 = 1/2.</p><p>Pada <b>pecahan campuran</b>, kadang pecahan pertama lebih kecil dari pecahan kedua (misalnya 1/5 dan 3/4). Kita bisa <b>meminjam 1 utuh</b>, atau lebih mudah <b>mengubah keduanya menjadi pecahan tidak wajar</b>. Setelah itu, <b>sederhanakan</b> hasilnya.</p>`,
+  vid: () => [
+    fr_(STK(ROW(Fh(3, 4), 4, [[0, 3, 'a']]), ROW('− ' + Fh(1, 4), 4, [[2, 3, 'd']]), ROW('= ' + Fh(2, 4), 4, [[0, 2, 'a']])), '① 3/4 − 1/4. Dari 3 potong, kita ambil 1 potong (merah muda). Sisa <b>2 potong</b>, yaitu 2/4.', 'Tiga per empat dikurangi satu per empat. Dari tiga potong, kita ambil satu potong. Sisa dua potong, yaitu dua per empat.'),
+    fr_(MULX(2, 4, 2, '÷'), '② 2/4 masih bisa disederhanakan: bagi atas dan bawah dengan 2, jadi <b>1/2</b>. Selalu periksa apakah hasil bisa disederhanakan!', 'Dua per empat masih bisa disederhanakan. Bagi atas dan bawah dengan 2, jadi satu per dua. Selalu periksa apakah hasil bisa disederhanakan.'),
+    fr_(STK(ROW(Fh(5, 6), 6, [[0, 5, 'a']]), ROW('− ' + Fh(2, 6), 6, [[3, 5, 'd']]), ROW('= ' + Fh(3, 6), 6, [[0, 3, 'a']])), '③ 5/6 − 1/3. Penyebut berbeda, jadi 1/3 diubah menjadi <b>2/6</b>. Lalu 5/6 − 2/6 = 3/6 = <b>1/2</b>.', 'Lima per enam dikurangi satu per tiga. Penyebut berbeda, jadi satu per tiga diubah menjadi dua per enam. Lalu lima per enam dikurangi dua per enam sama dengan tiga per enam, yaitu satu per dua.'),
+    fr_(LN('4 3/4 − 1 1/2', 'Bulat: 4 − 1 = 3', 'Pecahan: 3/4 − 2/4 = 1/4', '<b>Hasil: 3 1/4</b>'), '④ <b>Campuran</b>: 4 3/4 − 1 1/2. Bulat: 4 − 1 = 3. Pecahan: 3/4 − 2/4 = 1/4. Hasilnya 3 1/4.', 'Pecahan campuran, 4 3/4 dikurangi 1 1/2. Bulatnya, 4 dikurangi 1 sama dengan 3. Pecahannya, 3/4 dikurangi 2/4 sama dengan 1/4. Hasilnya 3 1/4.'),
+    fr_(LN('3 1/5 − 1 3/4', '1/5 lebih kecil dari 3/4, sulit dikurangkan langsung!', 'Ubah: 3 1/5 = 16/5 dan 1 3/4 = 7/4', 'KPK 20: 64/20 − 35/20 = 29/20', '<b>= 1 9/20</b>'), '⑤ <b>Meminjam</b>: 3 1/5 − 1 3/4. Karena 1/5 &lt; 3/4, ubah keduanya menjadi pecahan tidak wajar: 16/5 dan 7/4. KPK 20: 64/20 − 35/20 = 29/20 = 1 9/20.', 'Meminjam. 3 1/5 dikurangi 1 3/4. Karena 1/5 lebih kecil dari 3/4, ubah keduanya menjadi pecahan tidak wajar, yaitu 16/5 dan 7/4. Dengan KPK 20, 64/20 dikurangi 35/20 sama dengan 29/20, yaitu 1 9/20.'),
+    fr_(LN('Cek dengan menjumlah balik:', '1 9/20 + 1 3/4', '= 29/20 + 35/20 = 64/20', '= 3 1/5 ✓'), '⑥ <b>Cek hasil</b> dengan menjumlah balik: 1 9/20 + 1 3/4 = 29/20 + 35/20 = 64/20 = 3 1/5. Cocok dengan soal awal!', 'Cek hasilnya dengan menjumlah balik. 1 9/20 ditambah 1 3/4 sama dengan 29/20 ditambah 35/20, yaitu 64/20 atau 3 1/5. Cocok dengan soal awal.'),
+    fr_(STK(ROW(Fh(5, 6), 6, [[0, 5, 'a']]), ROW('− ' + Fh(1, 2), 6, [[2, 5, 'd']])), '⑦ Giliranmu! 5/6 − 1/2.', 'Giliranmu. 5/6 dikurangi 1/2.', { q: 'Berapa hasil 5/6 − 1/2?', o: ['4/4', '1/3', '2/3'], k: 1, e: '1/2 = 3/6. Jadi 5/6 − 3/6 = 2/6 = 1/3.' }),
+    fr_(RING('<b>Ingat!</b><br>Samakan <b>penyebut</b> dulu.<br>Kurangkan <b>pembilang</b>.<br><b>Sederhanakan</b> hasilnya.'), '⑧ Rangkuman: samakan penyebut, kurangkan pembilang, lalu sederhanakan. Untuk campuran yang sulit, ubah menjadi pecahan tidak wajar.', 'Rangkuman. Samakan penyebut, kurangkan pembilang, lalu sederhanakan. Untuk campuran yang sulit, ubah menjadi pecahan tidak wajar.')],
+  langkah: { judul: 'Langkah mengurangkan pecahan', contoh: `<div class="ex">Contoh: 5 − 1 3/4 − 2 1/2 (sisa tali dari 5 meter).</div>`,
+    steps: ['Hitung dulu yang <b>terpakai</b>: 1 3/4 + 2 1/2 = 7/4 + 10/4 = 17/4 = <b>4 1/4</b>.', 'Kurangkan dari 5: 5 − 4 1/4.', 'Ubah 5 = 20/4, sehingga 20/4 − 17/4 = <b>3/4</b>.', 'Jadi sisa tali <b>3/4 meter</b>.'] },
+  contoh: [['🎀', 'Pita 3 m dipakai 1 1/2 m. Sisa pita 3 − 1 1/2 = 1 1/2 m.'], ['🍕', 'Sisa pizza setelah dimakan 1/3 dan 1/4: 1 − 7/12 = 5/12 bagian.'], ['🛢️', 'Tangki solar berisi 3/4 bagian, terpakai 1/3 bagian. Sisa 9/12 − 4/12 = 5/12 bagian.']],
+  cek: [{ q: '7/8 − 3/8 = ... (paling sederhana)', o: ['4/16', '1/2', '10/8'], k: 1, e: '7 − 3 = 4, jadi 4/8 yang disederhanakan menjadi 1/2.' }, { q: '3/4 − 1/3 = ...', o: ['2/12', '5/12', '2/7'], k: 1, e: 'KPK 12: 9/12 − 4/12 = 5/12.' }, { q: '2 1/2 − 1 3/4 = ...', o: ['1 1/4', '3/4', '1 1/2'], k: 1, e: '2 1/2 = 5/2 = 10/4 dan 1 3/4 = 7/4. Jadi 10/4 − 7/4 = 3/4.' }],
+  ingat: 'Kurangkan pecahan: <b>samakan penyebut</b>, kurangkan <b>pembilang</b>, <b>sederhanakan</b>. Campuran sulit: ubah ke pecahan tidak wajar. Cek hasil dengan menjumlah balik.' },
+{ id: 5, d: 2, ic: '✖️', t: 'Perkalian & Pembagian Pecahan', sub: 'model luas dan kebalikan', tp: 'TP-4', mnt: 16, wd: 'kali',
+  tujuan: 'Kamu dapat mengalikan dan membagi pecahan serta menerapkannya pada masalah sehari-hari.',
+  cover: area(2, 4, 1, 3),
+  konsepJudul: 'Bagaimana mengalikan dan membagi pecahan?',
+  konsep: `<p><b>Perkalian:</b> kalikan <b>pembilang dengan pembilang</b> dan <b>penyebut dengan penyebut</b>. Tidak perlu menyamakan penyebut! Contoh 1/2 × 3/4 = 3/8. Artinya "setengah dari 3/4".</p><p>Bilangan bulat dikali pecahan: kalikan bilangan bulat dengan <b>pembilangnya</b>. Contoh 3 × 2/5 = 6/5 = 1 1/5.</p><p><b>Pembagian:</b> bagi pecahan artinya <b>kalikan dengan kebalikannya</b>. Contoh 3/4 ÷ 1/4 = 3/4 × 4/1 = 3. Maknanya: "ada berapa potong 1/4 di dalam 3/4?"</p>`,
+  vid: () => [
+    fr_(area(2, 4, 1, 3), '① 1/2 × 3/4 dengan <b>model luas</b>. Kotak dibagi 2 baris dan 4 kolom. Warnai 1 baris (1/2, jingga) dan 3 kolom (3/4, hijau). Bagian yang <b>bertumpuk (ungu)</b> ada 3 dari 8 kotak.', 'Satu per dua dikali tiga per empat dengan model luas. Kotak dibagi dua baris dan empat kolom. Warnai satu baris, yaitu satu per dua, dan tiga kolom, yaitu tiga per empat. Bagian yang bertumpuk ada tiga dari delapan kotak.'),
+    fr_(`<div class="mx">${Fh(1, 2)}<b>×</b>${Fh(3, 4)}<b>=</b>${Fh('1×3', '2×4')}<b>=</b>${Fh(3, 8)}</div>`, '② Aturannya: pembilang × pembilang dan penyebut × penyebut. 1 × 3 = 3 dan 2 × 4 = 8, jadi <b>3/8</b>. Sama dengan hasil model luas!', 'Aturannya, pembilang dikali pembilang, dan penyebut dikali penyebut. 1 dikali 3 sama dengan 3, dan 2 dikali 4 sama dengan 8. Jadi 3/8, sama dengan hasil model luas.'),
+    fr_(STK(ROW(Fh(2, 5), 5, [[0, 2, 'a']]), ROW(Fh(2, 5), 5, [[0, 2, 'b']]), ROW(Fh(2, 5), 5, [[0, 2, 'c']])) + `<div class="mx">3 × ${Fh(2, 5)}<b>=</b>${Fh(6, 5)}<b>=</b>${Mx(1, 1, 5)}</div>`, '③ <b>Bulat × pecahan</b>: 3 × 2/5 berarti 3 kali 2/5. Pembilangnya 3 × 2 = 6, jadi 6/5 = 1 1/5.', 'Bilangan bulat dikali pecahan. 3 dikali 2/5 berarti tiga kali dua per lima. Pembilangnya 3 dikali 2 sama dengan 6, jadi 6/5, atau 1 1/5.'),
+    fr_(ROW(Fh(3, 4), 4, [[0, 1, 'a'], [1, 2, 'b'], [2, 3, 'c']]) + `<div class="cmp">${Fh(3, 4)} ÷ ${Fh(1, 4)} = <b>3</b></div>`, '④ <b>Pembagian</b>: 3/4 ÷ 1/4 artinya ada berapa potong 1/4 di dalam 3/4? Ternyata ada <b>3</b> potong.', 'Pembagian. 3/4 dibagi 1/4 artinya ada berapa potong 1/4 di dalam 3/4. Ternyata ada tiga potong.'),
+    fr_(`<div class="mx">${Fh(3, 4)}<b>÷</b>${Fh(1, 4)}<b>=</b>${Fh(3, 4)}<b>×</b>${Fh(4, 1)}<b>=</b>${Fh(12, 4)}<b>=</b>3</div>`, '⑤ Cara cepat: <b>ubah ÷ menjadi ×</b> lalu balik (kebalikan) pecahan kedua. 1/4 dibalik menjadi 4/1. Jadi 3/4 × 4/1 = 12/4 = 3.', 'Cara cepatnya, ubah bagi menjadi kali, lalu balik pecahan kedua. 1/4 dibalik menjadi 4/1. Jadi 3/4 dikali 4/1 sama dengan 12/4, yaitu 3.'),
+    fr_(ROW(Fh(1, 2), 6, [[0, 1, 'a'], [1, 2, 'b'], [2, 3, 'c']]) + `<div class="cmp">${Fh(1, 2)} ÷ 3 = ${Fh(1, 2)} × ${Fh(1, 3)} = ${Fh(1, 6)}</div>`, '⑥ <b>1/2 ÷ 3</b>: setengah dibagi menjadi 3 bagian sama besar. Tiap bagian 1/6. Hitungannya 1/2 × 1/3 = 1/6.', 'Satu per dua dibagi tiga. Setengah dibagi menjadi tiga bagian sama besar, tiap bagian 1/6. Hitungannya, 1/2 dikali 1/3 sama dengan 1/6.'),
+    fr_(area(3, 5, 2, 3), '⑦ Giliranmu! Lihat model luas 2/3 × 3/5.', 'Giliranmu. Lihat model luas dua per tiga dikali tiga per lima.', { q: 'Berapa hasil 2/3 × 3/5 (paling sederhana)?', o: ['2/5', '5/8', '6/8'], k: 0, e: '2 × 3 = 6 dan 3 × 5 = 15, jadi 6/15. Sederhanakan dengan membagi 3: 2/5.' }),
+    fr_(RING('<b>Ingat!</b><br>Kali: <b>atas × atas</b>, <b>bawah × bawah</b>.<br>Bagi: <b>kalikan kebalikannya</b>.<br>Lalu <b>sederhanakan</b>.'), '⑧ Rangkuman: perkalian, atas kali atas dan bawah kali bawah. Pembagian, kalikan dengan kebalikan pecahan kedua. Lalu sederhanakan.', 'Rangkuman. Perkalian, atas kali atas dan bawah kali bawah. Pembagian, kalikan dengan kebalikan pecahan kedua. Lalu sederhanakan.')],
+  langkah: { judul: 'Langkah mengalikan & membagi pecahan', contoh: `<div class="ex">Contoh: 2/3 ÷ 1/6 dan 4 × 3/8.</div>`,
+    steps: ['<b>Bagi:</b> ubah ÷ menjadi ×, balik pecahan kedua: 2/3 × 6/1.', '2 × 6 = 12 dan 3 × 1 = 3, jadi 12/3 = <b>4</b>.', '<b>Bulat × pecahan:</b> 4 × 3/8 = (4 × 3)/8 = 12/8.', 'Sederhanakan: 12/8 = 3/2 = <b>1 1/2</b>.'] },
+  contoh: [['🍳', 'Resep untuk 4 porsi memakai 3/4 kg tepung. Untuk 2 kali resep: 2 × 3/4 = 3/2 = 1 1/2 kg.'], ['🥛', '3/4 liter susu dibagi untuk 3 gelas sama banyak: 3/4 ÷ 3 = 3/4 × 1/3 = 1/4 liter per gelas.'], ['🪚', 'Papan 3/4 m dipotong menjadi potongan 1/8 m. Ada 3/4 ÷ 1/8 = 6 potongan.']],
+  cek: [{ q: '1/2 × 1/3 = ...', o: ['2/5', '1/6', '1/5'], k: 1, e: '1 × 1 = 1 dan 2 × 3 = 6, jadi 1/6.' }, { q: '4 × 3/8 = ...', o: ['1 1/2', '12/32', '7/8'], k: 0, e: '4 × 3 = 12, jadi 12/8 = 3/2 = 1 1/2.' }, { q: '2/3 ÷ 1/6 = ...', o: ['4', '1/9', '2/18'], k: 0, e: '2/3 × 6/1 = 12/3 = 4.' }],
+  ingat: 'Perkalian: <b>pembilang × pembilang</b>, <b>penyebut × penyebut</b>. Pembagian: <b>kalikan dengan kebalikan</b> pecahan kedua. Selalu <b>sederhanakan</b> hasil.' },
+{ id: 6, d: 2, ic: '🏷️', t: 'Diskon, Persen & Literasi Numerasi', sub: 'membaca data dan memecahkan masalah', tp: 'TP-4 & TP-5', mnt: 16, wd: 'diskon',
+  tujuan: 'Kamu dapat menghitung diskon, membandingkan penawaran, dan memecahkan soal cerita dengan data berbentuk teks dan tabel.',
+  cover: g100(25),
+  konsepJudul: 'Apa itu persen dan diskon?',
+  konsep: `<p><b>Persen</b> artinya "per seratus". 25% berarti 25/100 = <b>1/4</b>. Jadi diskon 25% sama dengan diskon 1/4. Persen, pecahan, dan desimal adalah tiga cara menulis nilai yang sama: 25% = 1/4 = 0,25.</p><p><b>Diskon</b> adalah potongan harga. <b>Potongan</b> = diskon × harga awal. <b>Harga yang dibayar</b> = harga awal − potongan. Contoh: tas Rp80.000 diskon 1/4. Potongan = 1/4 × 80.000 = Rp20.000, jadi bayar Rp60.000.</p><p>Untuk membandingkan dua diskon, <b>ubah ke bentuk yang sama</b> (misalnya persen). Dalam <b>soal cerita</b>, baca teks dan tabel dengan teliti, tandai informasi penting, pilih operasi yang tepat, hitung, lalu periksa apakah jawabannya masuk akal.</p>`,
+  vid: () => [
+    fr_(g100(25), '① Persen artinya <b>per seratus</b>. Dari 100 kotak, 25 kotak diwarnai: 25/100 = <b>25%</b> = <b>1/4</b>.', 'Persen artinya per seratus. Dari seratus kotak, dua puluh lima kotak diwarnai. Itu 25/100, yaitu 25 persen, sama dengan 1/4.'),
+    fr_(STK(ROW('Harga Rp80.000', 4, [[0, 4, 'c']]), ROW('Potongan 1/4', 4, [[0, 3, 'c'], [3, 4, 'd']])), '② Tas Rp80.000 diskon 1/4. Harga dibagi 4 bagian sama besar, tiap bagian Rp20.000. Potongan = <b>1/4 × 80.000 = Rp20.000</b> (bagian merah muda).', 'Tas seharga 80.000 rupiah diskon 1/4. Harga dibagi empat bagian sama besar, tiap bagian 20.000 rupiah. Potongannya satu bagian, yaitu 20.000 rupiah.'),
+    fr_(STK(ROW('Bayar', 4, [[0, 3, 'g']]), `<div class="cmp">Bayar = 80.000 − 20.000 = <b>Rp60.000</b></div>`, `<div class="cmp">atau ${Fh(3, 4)} × 80.000 = <b>Rp60.000</b></div>`), '③ Harga yang dibayar = 80.000 − 20.000 = <b>Rp60.000</b>. Cara cepat: bayar 3/4 bagian, yaitu 3/4 × 80.000 = Rp60.000.', 'Harga yang dibayar sama dengan 80.000 dikurangi 20.000, yaitu 60.000 rupiah. Cara cepat, bayar tiga per empat bagian, yaitu 3/4 dikali 80.000 sama dengan 60.000 rupiah.'),
+    fr_(`<div class="mx"><span>Toko A</span> ${Fh(1, 4)}<b>=</b><span class="big">25%</span></div><div class="mx"><span>Toko B</span><span class="big">30%</span></div><div class="cmp">30% &gt; 25% → <b>diskon Toko B lebih besar</b></div>`, '④ <b>Membandingkan diskon</b>: Toko A memberi 1/4 dan Toko B memberi 30%. Ubah ke persen: 1/4 = 25%. Karena 30% &gt; 25%, diskon Toko B lebih besar.', 'Membandingkan diskon. Toko A memberi 1/4 dan Toko B memberi 30 persen. Ubah ke persen, 1/4 sama dengan 25 persen. Karena 30 persen lebih dari 25 persen, diskon Toko B lebih besar.'),
+    fr_(`<div class="lit"><div><b>📖 1. Baca</b><br>wacana dan tabel</div><div><b>🖍️ 2. Tandai</b><br>informasi penting</div><div><b>✏️ 3. Pilih</b><br>operasi hitung</div><div><b>✅ 4. Cek</b><br>masuk akal?</div></div>`, '⑤ <b>Strategi soal cerita</b>: 1) Baca wacana dan tabel. 2) Tandai informasi penting. 3) Pilih operasi hitung. 4) Cek apakah jawaban masuk akal.', 'Strategi soal cerita. Satu, baca wacana dan tabel. Dua, tandai informasi penting. Tiga, pilih operasi hitung. Empat, cek apakah jawaban masuk akal.'),
+    fr_(`<div class="lit2"><p>“Rani membeli tas <mark class="pb2">Rp80.000</mark> di toko yang buka pukul <s>09.00</s>. Toko memberi diskon <mark class="pb2">1/4</mark>.”</p><p>✅ Penting: harga dan diskon.<br>❌ Tidak penting: jam buka toko.</p></div>`, '⑥ Tidak semua angka diperlukan! Dari kalimat itu, yang penting: harga Rp80.000 dan diskon 1/4. Jam buka toko adalah informasi yang tidak diperlukan.', 'Tidak semua angka diperlukan. Dari kalimat itu, yang penting adalah harga 80.000 rupiah dan diskon 1/4. Jam buka toko adalah informasi yang tidak diperlukan.'),
+    fr_(ROW('Harga Rp50.000', 5, [[0, 5, 'c']]), '⑦ Giliranmu! Baju Rp50.000 diskon 20%.', 'Giliranmu. Baju seharga 50.000 rupiah diskon 20 persen.', { q: 'Berapa rupiah potongan harganya?', o: ['Rp10.000', 'Rp40.000', 'Rp5.000'], k: 0, e: '20% = 1/5. Potongan = 1/5 × 50.000 = Rp10.000. (Rp40.000 adalah harga yang dibayar.)' }),
+    fr_(RING('<b>Ingat!</b><br>Potongan = diskon × harga.<br>Bayar = harga − potongan.<br>Bandingkan: ubah ke <b>persen</b>.'), '⑧ Rangkuman: potongan sama dengan diskon dikali harga. Bayar sama dengan harga dikurangi potongan. Untuk membandingkan diskon, ubah ke persen.', 'Rangkuman. Potongan sama dengan diskon dikali harga. Bayar sama dengan harga dikurangi potongan. Untuk membandingkan diskon, ubah ke persen.')],
+  langkah: { judul: 'Langkah menghitung diskon & menyelesaikan soal cerita', contoh: `<div class="ex">Contoh: Toko A: Rp80.000 diskon 1/4. Toko B: Rp75.000 diskon 30%. Mana yang lebih murah?</div>`,
+    steps: ['<b>Toko A:</b> potongan 1/4 × 80.000 = 20.000, jadi bayar 80.000 − 20.000 = <b>Rp60.000</b>.', '<b>Toko B:</b> potongan 30% × 75.000 = 22.500, jadi bayar 75.000 − 22.500 = <b>Rp52.500</b>.', 'Bandingkan: 52.500 &lt; 60.000.', 'Jadi <b>Toko B lebih murah</b>. Cek: masuk akal karena diskonnya lebih besar dan harganya lebih rendah.'] },
+  contoh: [['🛍️', 'Sepatu Rp200.000 diskon 1/4: potongan Rp50.000 dan bayar Rp150.000.'], ['🎟️', 'Tiket Rp40.000 diskon 50% (atau 1/2): bayar Rp20.000.'], ['📊', 'Nilai 18/24 sama dengan 3/4 dan 75%. Dengan persen, nilainya mudah dibandingkan dengan teman.']],
+  cek: [{ q: 'Diskon 1/5 sama dengan ... persen.', o: ['5%', '20%', '15%'], k: 1, e: '1/5 = 20/100 = 20%.' }, { q: 'Baju Rp60.000 diskon 25%. Harga yang dibayar adalah...', o: ['Rp15.000', 'Rp45.000', 'Rp35.000'], k: 1, e: '25% × 60.000 = 15.000. Bayar 60.000 − 15.000 = Rp45.000. (Rp15.000 adalah potongan.)' }, { q: 'Toko A diskon 1/4 dan Toko B diskon 30%. Diskon yang lebih besar milik...', o: ['Toko A', 'Toko B', 'Sama besar'], k: 1, e: '1/4 = 25% &lt; 30%, jadi Toko B.' }],
+  ingat: 'Persen = per seratus. Potongan = <b>diskon × harga</b>. Bayar = <b>harga − potongan</b>. Bandingkan diskon dengan <b>mengubah ke persen</b>. Soal cerita: baca, tandai, pilih operasi, hitung, cek.' }
+];
+// ===== widget interaktif =====
+const sl = (id, arr, v, f) => `<select id="${id}" aria-label="pilih">${arr.map((x, i) => `<option value="${i}" ${i === v ? 'selected' : ''}>${f ? f(x) : x}</option>`).join('')}</select>`;
+const FL = [[1, 2], [1, 3], [2, 3], [1, 4], [3, 4], [1, 6], [5, 6], [2, 5], [3, 5], [3, 8], [5, 8], [7, 10]];
+const ft = x => x[0] + '/' + x[1];
+const WD = {};
+WD.senilai = el => {
+  let bi = 1, k = 2, si = 0; const BS = [[1, 2], [2, 3], [3, 4], [3, 5], [5, 6]], SM = [[6, 8], [12, 18], [10, 25], [18, 24], [15, 20], [16, 40]];
+  const dr = () => { const [a, b] = BS[bi], [p, q] = SM[si], g = gcd(p, q);
+    el.innerHTML = `<div class="wd"><h4>① Membuat pecahan senilai</h4><p>Pecahan dasar: ${sl('w1', BS, bi, ft)} &nbsp; Kalikan atas &amp; bawah dengan <b>${k}</b></p><input id="w1k" type="range" min="1" max="6" value="${k}" aria-label="pengali">${STK(ROW(Fh(a, b), b, [[0, a, 'a']]), ROW(Fh(a * k, b * k), b * k, [[0, a * k, 'b']]))}<div class="mx">${Fh(a, b)}<b>=</b>${Fh(a + '×' + k, b + '×' + k)}<b>=</b>${Fh(a * k, b * k)}</div><p class="bx">Batang bawah punya ${b * k} bagian, ${a * k} diwarnai. Panjang warnanya <b>sama</b> dengan batang atas!</p></div>
+    <div class="wd"><h4>② Menyederhanakan</h4><p>Pilih pecahan: ${sl('w2', SM, si, ft)}</p>${ROW(Fh(p, q), q, [[0, p, 'a']])}${g > 1 ? `<div class="mx">${Fh(p, q)}<span class="ar">÷${g}<br>÷${g}</span><b>=</b>${Fh(p / g, q / g)}</div><p class="bx">FPB dari ${p} dan ${q} adalah <b>${g}</b>. Bentuk paling sederhana: <b>${p / g}/${q / g}</b>.</p>` : `<p class="bx">FPB dari ${p} dan ${q} adalah 1, jadi sudah <b>paling sederhana</b>.</p>`}</div>`;
+    $id('w1').onchange = e => { bi = +e.target.value; mainkan('klik'); dr(); }; $id('w1k').oninput = e => { k = +e.target.value; dr(); $id('w1k').focus(); }; $id('w2').onchange = e => { si = +e.target.value; mainkan('klik'); dr(); }; };
+  dr();
+};
+WD.banding = el => {
+  let i = 2, j = 8, ord = [], sel = [], tgt = []; const ac = () => { const s = new Set(); while (s.size < 4) s.add(Math.floor(Math.random() * FL.length)); ord = [...s]; tgt = ord.slice().sort((x, y) => FL[x][0] / FL[x][1] - FL[y][0] / FL[y][1]); sel = []; };
+  ac();
+  const dr = () => { const [a, b] = FL[i], [c, d] = FL[j], L = lcm(b, d), A = a * L / b, C = c * L / d, s = A === C ? '=' : A < C ? '&lt;' : '&gt;';
+    const sdone = sel.length === 4, benar = sdone && sel.every((x, n) => FL[x][0] / FL[x][1] === FL[tgt[n]][0] / FL[tgt[n]][1]);
+    el.innerHTML = `<div class="wd"><h4>① Bandingkan dua pecahan</h4><p>${sl('wa', FL, i, ft)} dengan ${sl('wb', FL, j, ft)}</p>${STK(ROW(Fh(a, b), b, [[0, a, 'a']]), ROW(Fh(c, d), d, [[0, c, 'b']]))}
+    ${b === d ? '<p class="bx">Penyebut sama, bandingkan pembilang saja.</p>' : `<p class="bx">KPK dari ${b} dan ${d} = <b>${L}</b>. ${Fh(a, b)} = ${Fh(A, L)} dan ${Fh(c, d)} = ${Fh(C, L)}.</p>`}<div class="cmp">${Fh(a, b)} <b>${s}</b> ${Fh(c, d)}</div></div>
+    <div class="wd"><h4>② Urutkan dari TERKECIL ke TERBESAR</h4><p>Ketuk pecahan satu per satu secara berurutan.</p><div class="tiles">${ord.map(x => `<button class="tile ${sel.includes(x) ? 'on' : ''}" data-x="${x}" ${sel.includes(x) ? 'disabled' : ''}>${Fh(FL[x][0], FL[x][1])}</button>`).join('')}</div><p>Urutanmu: ${sel.map(x => Fh(FL[x][0], FL[x][1])).join(' &lt; ') || '<i>belum ada</i>'}</p>${sdone ? `<div class="bx">${benar ? '🎉 <b>Benar!</b> Urutannya sudah tepat.' : '💭 Belum tepat. Urutan benar: ' + tgt.map(x => Fh(FL[x][0], FL[x][1])).join(' &lt; ')}</div>` : ''}<p><button class="btn sec" id="wr">↺ Ulangi</button> <button class="btn" id="wn">Soal baru</button></p></div>`;
+    $id('wa').onchange = e => { i = +e.target.value; mainkan('klik'); dr(); }; $id('wb').onchange = e => { j = +e.target.value; mainkan('klik'); dr(); };
+    el.querySelectorAll('[data-x]').forEach(b => b.onclick = () => { sel.push(+b.dataset.x); if (sel.length === 4) { const ok = sel.every((x, n) => FL[x][0] / FL[x][1] === FL[tgt[n]][0] / FL[tgt[n]][1]); mainkan(ok ? 'benar' : 'salah'); } dr(); });
+    $id('wr').onclick = () => { sel = []; dr(); }; $id('wn').onclick = () => { ac(); dr(); }; };
+  dr();
+};
+function sumBars(L, n, col) { const x = Math.min(n, L); return ROW('', L, [[0, x, col]]) + (n > L ? ROW('lebih', L, [[0, n - L, col]]) : ''); }
+WD.tambah = el => {
+  let i = 0, j = 1; const dr = () => { const [a, b] = FL[i], [c, d] = FL[j], L = lcm(b, d), A = a * L / b, C = c * L / d, S = A + C, g = gcd(S, L);
+    el.innerHTML = `<div class="wd"><h4>Jumlahkan dua pecahan</h4><p>${sl('wa', FL, i, ft)} <b>+</b> ${sl('wb', FL, j, ft)}</p>${STK(ROW(Fh(a, b), b, [[0, a, 'a']]), ROW(Fh(c, d), d, [[0, c, 'b']]))}
+    <ol class="steps"><li>${b === d ? 'Penyebut sudah sama (' + b + ').' : `KPK dari ${b} dan ${d} adalah <b>${L}</b>.`}</li><li>Samakan: ${Fh(a, b)} = ${Fh(A, L)} dan ${Fh(c, d)} = ${Fh(C, L)}.</li><li>Jumlahkan pembilang: ${A} + ${C} = <b>${S}</b>, jadi ${Fh(S, L)}.</li><li>${S / g === S && L / g === L ? (S > L ? 'Ubah ke campuran: ' + mix(S, L) : 'Sudah paling sederhana.') : 'Sederhanakan: ' + Fh(S / g, L / g) + (S / g > L / g ? ' = ' + mix(S, L) : '')}.</li></ol>
+    ${STK(ROW(Fh(A, L), L, [[0, A, 'a']]), ROW('+ ' + Fh(C, L), L, [[A, A + C > L ? L : A + C, 'b']]))}<p>Hasil (satu utuh = ${L} bagian):</p>${sumBars(L, S, 'g')}<div class="cmp">${Fh(a, b)} + ${Fh(c, d)} = <b>${mix(S, L)}</b></div></div>`;
+    $id('wa').onchange = e => { i = +e.target.value; mainkan('klik'); dr(); }; $id('wb').onchange = e => { j = +e.target.value; mainkan('klik'); dr(); }; };
+  dr();
+};
+WD.kurang = el => {
+  let i = 6, j = 1; const dr = () => { let [a, b] = FL[i], [c, d] = FL[j], tukar = false; if (a / b < c / d) { [a, b, c, d] = [c, d, a, b]; tukar = true; } const L = lcm(b, d), A = a * L / b, C = c * L / d, S = A - C, g = gcd(S || 1, L);
+    el.innerHTML = `<div class="wd"><h4>Kurangkan dua pecahan</h4><p>${sl('wa', FL, i, ft)} <b>−</b> ${sl('wb', FL, j, ft)}</p>${tukar ? '<p class="bx">Pecahan pertama lebih kecil, jadi kita tukar agar hasilnya tidak negatif.</p>' : ''}${STK(ROW(Fh(a, b), L, [[0, A, 'a']]), ROW('− ' + Fh(c, d), L, [[A - C, A, 'd']]), ROW('= sisa', L, [[0, S, 'g']]))}
+    <ol class="steps"><li>${b === d ? 'Penyebut sudah sama.' : `KPK dari ${b} dan ${d} adalah <b>${L}</b>.`}</li><li>Samakan: ${Fh(a, b)} = ${Fh(A, L)} dan ${Fh(c, d)} = ${Fh(C, L)}.</li><li>Kurangkan pembilang: ${A} − ${C} = <b>${S}</b>, jadi ${Fh(S, L)}.</li><li>${S === 0 ? 'Hasilnya 0.' : (gcd(S, L) > 1 ? 'Sederhanakan: ' + Fh(S / g, L / g) : 'Sudah paling sederhana.')}</li></ol><div class="cmp">${Fh(a, b)} − ${Fh(c, d)} = <b>${S === 0 ? '0' : Fh(S / g, L / g)}</b></div></div>`;
+    $id('wa').onchange = e => { i = +e.target.value; mainkan('klik'); dr(); }; $id('wb').onchange = e => { j = +e.target.value; mainkan('klik'); dr(); }; };
+  dr();
+};
+WD.kali = el => {
+  let i = 0, j = 4, md = 0; const dr = () => { const [a, b] = FL[i], [c, d] = FL[j];
+    let h; if (!md) { const n = a * c, m = b * d, g = gcd(n, m); h = `${area(b, d, a, c)}<p class="bx">Jingga = ${Fh(a, b)} (${a} dari ${b} baris). Hijau = ${Fh(c, d)} (${c} dari ${d} kolom). Ungu (bertumpuk) = <b>${n}</b> dari ${m} kotak.</p><div class="mx">${Fh(a, b)}<b>×</b>${Fh(c, d)}<b>=</b>${Fh(a + '×' + c, b + '×' + d)}<b>=</b>${Fh(n, m)}${g > 1 ? '<b>=</b>' + Fh(n / g, m / g) : ''}</div>`; }
+    else { const n = a * d, m = b * c, g = gcd(n, m); h = `<ol class="steps"><li>Ubah ÷ menjadi ×.</li><li>Balik pecahan kedua: ${Fh(c, d)} menjadi ${Fh(d, c)}.</li><li>${Fh(a, b)} × ${Fh(d, c)} = ${Fh(n, m)}.</li><li>${g > 1 || n > m ? 'Sederhanakan: ' + mix(n, m) : 'Sudah paling sederhana.'}</li></ol><div class="cmp">${Fh(a, b)} ÷ ${Fh(c, d)} = <b>${mix(n, m)}</b></div><p class="bx">Artinya: ada <b>${dsc(+(n / m).toFixed(2))}</b> kali ${Fh(c, d)} di dalam ${Fh(a, b)}.</p>`; }
+    el.innerHTML = `<div class="wd"><h4>${md ? 'Pembagian pecahan' : 'Perkalian pecahan (model luas)'}</h4><p><button class="btn ${md ? 'sec' : ''}" id="m0">✖ Kali</button> <button class="btn ${md ? '' : 'sec'}" id="m1">➗ Bagi</button></p><p>${sl('wa', FL, i, ft)} <b>${md ? '÷' : '×'}</b> ${sl('wb', FL, j, ft)}</p>${h}</div>`;
+    $id('wa').onchange = e => { i = +e.target.value; mainkan('klik'); dr(); }; $id('wb').onchange = e => { j = +e.target.value; mainkan('klik'); dr(); }; $id('m0').onclick = () => { md = 0; dr(); }; $id('m1').onclick = () => { md = 1; dr(); }; };
+  dr();
+};
+WD.diskon = el => {
+  const HG = [40000, 50000, 60000, 75000, 80000, 100000, 150000, 200000], DK = [['1/10', .1], ['1/5', .2], ['1/4', .25], ['3/10', .3], ['1/3', 1 / 3], ['1/2', .5], ['10%', .1], ['20%', .2], ['25%', .25], ['30%', .3], ['40%', .4], ['50%', .5]];
+  let ha = 4, da = 2, hb = 3, db = 9; const toko = (n, h, d) => { const H = HG[h], [lab, p] = DK[d], pot = H * p, bay = H - pot; return { n, H, lab, p, pot, bay }; };
+  const dr = () => { const A = toko('A', ha, da), B = toko('B', hb, db), bar_ = t => ROW('Toko ' + t.n, 10, [[0, Math.round(10 * (1 - t.p)), 'c'], [Math.round(10 * (1 - t.p)), 10, 'd']]);
+    el.innerHTML = `<div class="wd"><h4>Bandingkan dua toko</h4><div class="grid"><div><b>Toko A</b><br>Harga ${sl('ha', HG, ha, rp)}<br>Diskon ${sl('da', DK, da, x => x[0])}</div><div><b>Toko B</b><br>Harga ${sl('hb', HG, hb, rp)}<br>Diskon ${sl('db', DK, db, x => x[0])}</div></div>
+    ${bar_(A)}${bar_(B)}<p><small>Ungu = dibayar, merah muda = potongan.</small></p><table class="tbl"><tr><th></th><th>Toko A</th><th>Toko B</th></tr><tr><td>Diskon</td><td>${fh(A.lab)} = ${dsc(Math.round(A.p * 1000) / 10)}%</td><td>${fh(B.lab)} = ${dsc(Math.round(B.p * 1000) / 10)}%</td></tr><tr><td>Potongan</td><td>${rp(A.pot)}</td><td>${rp(B.pot)}</td></tr><tr><td><b>Bayar</b></td><td><b>${rp(A.bay)}</b></td><td><b>${rp(B.bay)}</b></td></tr></table>
+    <div class="cmp">${Math.round(A.bay) === Math.round(B.bay) ? 'Harga akhir <b>sama</b>' : A.bay < B.bay ? '✅ <b>Toko A</b> lebih murah, selisih ' + rp(B.bay - A.bay) : '✅ <b>Toko B</b> lebih murah, selisih ' + rp(A.bay - B.bay)}</div></div>`;
+    [['ha', v => ha = v], ['da', v => da = v], ['hb', v => hb = v], ['db', v => db = v]].forEach(([id, f]) => $id(id).onchange = e => { f(+e.target.value); mainkan('klik'); dr(); }); };
+  dr();
+};
+
+</script>
+<script>
+// ===== Asesmen: mode TKA (layout ujian), labirin Petualangan, alarm sirine, hasil lengkap =====
+const pecah = t => { const [b, h] = String(t || '').split('||'); return { bahas: (b || '').trim(), hints: h ? h.split('§').map(x => x.trim()).filter(Boolean) : [] }; };
+const TP_MAT = { 'TP-1': 1, 'TP-2': 2, 'TP-3': 3, 'TP-4': 5, 'TP-5': 6 };
+const matTopik = k => MT.find(m => m.t === k) || (TP_MAT[k] ? MT.find(m => m.id === TP_MAT[k]) : null);
+const rangkumanHtml = n => { const ids = n === '1' ? [1, 2] : n === '2' ? [3, 4] : []; return ids.length ? `<details class="card" style="margin-bottom:10px"><summary><b>📖 Rangkuman materi</b>&nbsp;(buka jika perlu)</summary>${ids.map(i => { const m = MT.find(x => x.id === i); return `<p><b>${esc(m.t)}</b><br>${fh(m.ingat)}</p>`; }).join('')}</details>` : ''; };
+function pasangPelajari(root) { (root || document).querySelectorAll('[data-pm]').forEach(b => b.onclick = () => { mainkan('klik'); materiHalaman(+b.dataset.pm); window.scrollTo(0, 0); }); }
+function burst() {
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) return; const e = ['🎉', '⭐', '🍕', '✨', '🎊'], d = document.createElement('div'); d.className = 'burst';
+  for (let i = 0; i < 14; i++) { const s = document.createElement('span'); s.textContent = e[i % 5]; s.style.cssText = `left:${10 + Math.random() * 80}%;animation-delay:${Math.random() * .3}s;--dx:${(Math.random() - .5) * 160}px`; d.appendChild(s); }
+  document.body.appendChild(d); setTimeout(() => d.remove(), 1800);
+}
+function textOf(s, h) { const k = s.huruf ? s.huruf.indexOf(h) : LJ.indexOf(h); return s.pilihan[k]; }
+function urutHtml(s, j, cek) {
+  const pil = [].concat(j || []), sisa = s.pilihan.map((t, k) => ({ t, h: s.huruf ? s.huruf[k] : LJ[k] })).filter(x => !pil.includes(x.h)), kn = String(s.kunci || '').split(',').map(x => x.trim());
+  return `<div class="urt"><div class="urs" aria-label="urutanmu">${pil.map((h, n) => `<span class="uc ${cek ? (kn[n] === h ? 'ok' : 'no') : ''}"><b>${n + 1}</b>${fx(textOf(s, h))}</span>`).join('') || '<i>Ketuk item di bawah sesuai urutan yang benar</i>'}</div>${cek ? `<p class="bx">Urutan benar:<br>${kn.map((h, n) => `${n + 1}. ${fx(textOf(s, h) || '')}`).join('<br>')}</p>` : `<div class="uro">${sisa.map(x => `<button class="opt" data-u="${x.h}"><span>${fx(x.t)}</span></button>`).join('')}</div>${pil.length ? '<button class="btn sec" data-ur="1" style="min-height:44px">↺ Ulangi urutan</button>' : ''}`}</div>`;
+}
+function pasangUrut(q, s, ulang) {
+  M.querySelectorAll('[data-u]').forEach(b => b.onclick = () => { if (q.cek[s.id]) return; q.j[s.id] = [].concat(q.j[s.id] || [], b.dataset.u); jawab(s); mainkan('klik'); ulang(); });
+  M.querySelectorAll('[data-ur]').forEach(b => b.onclick = () => { q.j[s.id] = []; jawab(s); ulang(); });
+  pasangPelajari(M);
+}
+// ---------- mode TKA ----------
+function opsTKA(s, j) {
+  if (s.jenis === 'URUT') return urutHtml(s, j, false);
+  if (s.jenis === 'KAT') return s.pilihan.map((t, k) => `<div class="op kat"><span>${fx(t)}</span><span class="bs"><button data-r="${k}" data-v="B" class="${(j || [])[k] === 'B' ? 'sel' : ''}">Benar</button><button data-r="${k}" data-v="S" class="${(j || [])[k] === 'S' ? 'sel' : ''}">Salah</button></span></div>`).join('');
+  return s.pilihan.map((t, k) => { const h = s.huruf ? s.huruf[k] : LJ[k], sel = [].concat(j || []).includes(h); return `<button class="op ${sel ? 'sel' : ''}" data-h="${h}" role="${s.jenis === 'PGK' ? 'checkbox' : 'radio'}" aria-checked="${sel}"><span class="gl">${s.jenis === 'PGK' ? (sel ? '☑' : '☐') : (sel ? '◉' : '◯')}</span><span>${fx(t)}</span></button>`; }).join('');
+}
+function tampilTKA() {
+  const q = Q; if (!q || q.stop) return; const s = q.soal[q.i], j = q.j[s.id], tot = q.soal.length, dj = q.soal.filter(x => adaJ(x, q.j[x.id])).length, bel = tot - dj, akhir = q.i === tot - 1;
+  const stim = s.stimulus ? stimHtml(s.stimulus).replace('class="stim"', 'class="stim tks"') : '';
+  const tag = { PG: 'Pilih satu jawaban', PGK: 'Pilih lebih dari satu jawaban', KAT: 'Tentukan Benar atau Salah tiap pernyataan', URUT: 'Urutkan dengan mengetuk item satu per satu' }[s.jenis] || '';
+  M.innerHTML = `<div class="tkw"><div class="tkh"><div><b>TKA SIMULASI • PECAHAN VII</b><br><small>${esc(S.nama)} • Terjawab ${dj}/${tot} • <span id="pel" title="Peringatan">🛡️ ${pelDots(q.pel)}</span></small></div><div class="tmr timer" id="tm">${mmss(Math.round((q.akhir - Date.now()) / 1000))}</div></div>
+  <div class="tkb ${stim ? 'two' : ''}">${stim}<div class="tkq"><div class="tkp"><i style="width:${Math.round(dj / tot * 100)}%"></i></div><h3>Soal ${q.i + 1}</h3><p class="qt">${fx(s.teks)}</p><span class="ptag">${tag}</span><div class="ops">${opsTKA(s, j)}</div><small id="sv" style="color:#5E5278">Tersimpan otomatis ke server</small></div></div>
+  <div class="tkn"><div class="hint">👆 Kamu boleh mengerjakan soal yang mana saja lebih dulu. Ketuk nomor soal di bawah ini.</div><div class="nbs">${q.soal.map((x, k) => `<button class="${adaJ(x, q.j[x.id]) ? 'done' : ''} ${q.ragu[x.id] ? 'rg' : ''} ${k === q.i ? 'cur' : ''}" data-g="${k}" aria-label="Soal ${k + 1}">${k + 1}</button>`).join('')}<span class="lgd"><i class="g"></i> terjawab <i class="o"></i> ragu-ragu</span></div></div></div>
+  <div class="tkf"><button id="pv" ${q.i ? '' : 'disabled'}>← Sebelumnya</button><label class="rgl"><input type="checkbox" id="rgc" ${q.ragu[s.id] ? 'checked' : ''}> Ragu-ragu</label><button id="nx" class="bl" ${akhir ? 'disabled' : ''}>Selanjutnya →</button><button id="kp">🔒 Kumpulkan${bel ? ` (${bel} belum dijawab)` : ''}</button></div>`;
+  M.querySelectorAll('[data-h]').forEach(b => b.onclick = () => { const h = b.dataset.h; let a = [].concat(q.j[s.id] || []); q.j[s.id] = s.jenis === 'PGK' ? (a.includes(h) ? a.filter(x => x !== h) : a.concat(h)) : [h]; if (!q.j[s.id].length) delete q.j[s.id]; jawab(s); tampilTKA(); });
+  M.querySelectorAll('[data-r]').forEach(b => b.onclick = () => { const a = (q.j[s.id] || []).slice(); a.length = s.pilihan.length; a[+b.dataset.r] = b.dataset.v; q.j[s.id] = Array.from(a, x => x || ''); jawab(s); tampilTKA(); });
+  pasangUrut(q, s, tampilTKA);
+  M.querySelectorAll('[data-g]').forEach(b => b.onclick = () => { q.i = +b.dataset.g; tampilTKA(); window.scrollTo(0, 0); });
+  document.getElementById('pv').onclick = () => { q.i--; tampilTKA(); window.scrollTo(0, 0); }; document.getElementById('nx').onclick = () => { q.i++; tampilTKA(); window.scrollTo(0, 0); };
+  document.getElementById('rgc').onchange = e => { q.ragu[s.id] = e.target.checked; tampilTKA(); }; document.getElementById('kp').onclick = ringkasan;
+}
+function ringkasan() {
+  const q = Q, bel = q.soal.map((x, k) => adaJ(x, q.j[x.id]) ? 0 : k + 1).filter(Boolean), rg = q.soal.map((x, k) => q.ragu[x.id] ? k + 1 : 0).filter(Boolean);
+  kunciModal(1);
+  if (bel.length) { modal(`<div style="text-align:center">${pizi('encourage', 90)}<h2>Belum bisa dikumpulkan</h2></div><p>Semua soal harus dijawab dulu. Soal yang belum dijawab: <b>${bel.join(', ')}</b>.</p>${rg.length ? `<p>🚩 Soal ragu-ragu: ${rg.join(', ')}</p>` : ''}<p><button class="btn" id="kb">Kembali mengerjakan</button></p>`); kb.onclick = () => { tutupModal(); q.i = bel[0] - 1; tampilTKA(); }; return; }
+  modal(`<div style="text-align:center">${pizi('wave', 90)}<h2>Yakin ingin mengumpulkan sekarang?</h2></div><div class="grid" style="grid-template-columns:repeat(2,1fr);text-align:center"><div class="stat m"><b>${q.soal.length}</b>terjawab</div><div class="stat s"><b>${rg.length}</b>ragu-ragu</div></div>${rg.length ? `<p>🚩 Soal ragu-ragu: ${rg.join(', ')}. Kamu masih bisa meninjaunya.</p>` : ''}<p>⏱ Sisa waktu <b>${mmss(Math.round((q.akhir - Date.now()) / 1000))}</b>. Nilai pengerjaan pertama dikunci sebagai nilai resmi.</p><label style="display:flex;gap:10px;align-items:center;min-height:48px"><input type="checkbox" id="jj" style="width:28px;height:28px"> Saya, ${esc(S.nama)}, mengerjakan dengan jujur dan mandiri.</label><p style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sec" id="kb">← Periksa lagi</button><button class="btn" id="ya" disabled>🚀 Ya, kumpulkan!</button></p>`);
+  jj.onchange = () => ya.disabled = !jj.checked; kb.onclick = tutupModal; ya.onclick = () => { tutupModal(); kirim(); };
+}
+// ---------- alarm sirine & peringatan ----------
+function sirene() {
+  const c = ac_(); if (c) for (let k = 0; k < 6; k++) { nada(1250, k, .5, 'square', .22, 700); nada(700, k + .5, .5, 'sawtooth', .22, 1250); }
+  try { navigator.vibrate && navigator.vibrate([400, 200, 400, 200, 400]); } catch (e) {}
+  try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(`Peringatan! ${S.nama}, terdeteksi melakukan pelanggaran.`); u.lang = 'id-ID'; u.rate = .95; setTimeout(() => { try { speechSynthesis.speak(u); } catch (e) {} }, 6300); } catch (e) {}
+}
+function alarmTampil(n, jenis) {
+  let a = document.getElementById('alm'); if (!a) { a = document.createElement('div'); a.id = 'alm'; a.className = 'alm'; a.setAttribute('role', 'alertdialog'); a.setAttribute('aria-live', 'assertive'); document.body.appendChild(a); }
+  const J = String(jenis || 'Keluar dari halaman/tab'); a.innerHTML = `<div class="almc"><div class="sir" aria-hidden="true">🚨</div><h1>PERINGATAN ${n}/3</h1><h3>${esc(J.charAt(0).toUpperCase() + J.slice(1))}</h3><p>Dilarang keluar halaman atau menyalin soal.<br>Pada pelanggaran ke-3, asesmen dihentikan otomatis.</p><button id="almok">Saya mengerti, lanjutkan</button></div>`;
+  document.getElementById('almok').onclick = () => { a.remove(); try { speechSynthesis.cancel(); } catch (e) {} try { !document.fullscreenElement && document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); } catch (e) {} };
+  document.getElementById('almok').focus();
+}
+function peringatan(n) { sirene(); alarmTampil(n, 'Keluar dari halaman/tab'); }
+async function lapor(jenis) {
+  const q = Q; if (!q || !q.a3 || q.stop || Date.now() - lastLapor < 4000) return; lastLapor = Date.now();
+  sirene(); alarmTampil(Math.min(3, q.pel + 1), jenis);                       // alarm langsung, tanpa menunggu server
+  const r = await api('a3.pelanggaran', { idSesi: q.idSesi, jenis }); if (!r.success || Q !== q) return;
+  q.pel = r.data.pelanggaran; if (r.data.status === 'dihentikan') { q.stop = true; clearInterval(q.tm); const a = document.getElementById('alm'); if (a) a.remove(); return kirim(); }
+  alarmTampil(q.pel, jenis); const p = document.getElementById('pel'); if (p) p.innerHTML = '🛡️ ' + pelDots(q.pel);
+}
+// ---------- labirin (Asesmen 2: Petualangan) ----------
+const MZ = { W: 9, H: 6 };
+function mzBuat(n) {
+  const W = MZ.W, H = MZ.H;
+  for (let coba = 0; ; coba++) {                                   // huruf jawaban HANYA di ujung buntu, supaya tidak menghalangi jalur ke jawaban lain
+    const c = [...Array(H)].map(() => Array(W).fill(0)), v = [...Array(H)].map(() => Array(W).fill(0)), st = [[0, 0]]; v[0][0] = 1;
+    while (st.length) { const [x, y] = st[st.length - 1], nb = [[0, -1, 1, 4], [1, 0, 2, 8], [0, 1, 4, 1], [-1, 0, 8, 2]].filter(d => x + d[0] >= 0 && x + d[0] < W && y + d[1] >= 0 && y + d[1] < H && !v[y + d[1]][x + d[0]]);
+      if (!nb.length) { st.pop(); continue; } const d = nb[Math.floor(Math.random() * nb.length)]; c[y][x] |= d[2]; c[y + d[1]][x + d[0]] |= d[3]; v[y + d[1]][x + d[0]] = 1; st.push([x + d[0], y + d[1]]); }
+    const dist = [...Array(H)].map(() => Array(W).fill(-1)); dist[0][0] = 0; const qu = [[0, 0]];
+    while (qu.length) { const [x, y] = qu.shift(); [[0, -1, 1], [1, 0, 2], [0, 1, 4], [-1, 0, 8]].forEach(d => { const nx = x + d[0], ny = y + d[1]; if ((c[y][x] & d[2]) && dist[ny][nx] < 0) { dist[ny][nx] = dist[y][x] + 1; qu.push([nx, ny]); } }); }
+    const dead = []; for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if ((x || y) && [1, 2, 4, 8].filter(b => c[y][x] & b).length === 1) dead.push({ x, y, d: dist[y][x] });
+    if (dead.length < n && coba < 40) continue;
+    dead.sort((a, b) => (b.d - a.d) + (Math.random() - .5) * 4); const pos = []; dead.forEach(t => { if (pos.length < n && pos.every(p => Math.abs(p.x - t.x) + Math.abs(p.y - t.y) >= 3)) pos.push(t); }); dead.forEach(t => { if (pos.length < n && !pos.includes(t)) pos.push(t); });
+    for (let i = pos.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pos[i], pos[j]] = [pos[j], pos[i]]; }   // acak huruf A, B, C, D ke ujung buntu
+    return { c, pos: pos.slice(0, n), px: 0, py: 0 };
+  }
+}
+function tampilMaze() {
+  const q = Q; if (!q || q.stop) return; const s = q.soal[q.i], tot = q.soal.length; if (!q.mz || q.mz.i !== q.i) { q.mz = Object.assign(mzBuat(s.pilihan.length), { i: q.i, coba: 0, hint: 0, done: false }); }
+  const z = q.mz, H = pecah(s.penjelasan).hints, OL = ['#ff8a3d', '#1fb5a8', '#7c4dcc', '#e11d74', '#3E8E2F', '#2E9BD6'];
+  const cells = []; for (let y = 0; y < MZ.H; y++) for (let x = 0; x < MZ.W; x++) { const b = z.c[y][x], o = z.pos.findIndex(p => p.x === x && p.y === y); cells.push(`<div class="mc ${b & 1 ? '' : 'wn'} ${b & 2 ? '' : 'we'} ${b & 4 ? '' : 'ws'} ${b & 8 ? '' : 'ww'}">${o > -1 ? `<span class="ob" style="--o:${OL[o]}">${LJ[o]}</span>` : ''}</div>`); }
+  M.innerHTML = `<header class="top"><b>🗺️ Petualangan Asesmen 2</b><span class="chip">Misi ${q.i + 1}/${tot}</span><button class="btn sec" id="pt" style="min-height:40px">Peta</button></header><main class="wrap"><section>${rangkumanHtml('2')}<div class="card">${s.stimulus ? stimHtml(s.stimulus) : ''}<span class="tag">Misi ${q.i + 1} • ${esc(s.tp || '')}</span><h3 style="margin:8px 0">${fx(s.teks)}</h3>
+  <div class="lg">${s.pilihan.map((t, k) => `<span><b style="color:${OL[k]}">${LJ[k]}.</b> ${fx(t)}</span>`).join('')}</div>
+  <p style="margin:8px 0"><small>Gerakkan 🍕 ke huruf jawaban yang benar. Pakai tombol panah, keyboard (panah/WASD), atau geser di labirin.</small></p>
+  <div class="mzr"><div class="mzw"><div class="mz" id="mz" style="--W:${MZ.W}">${cells.join('')}<div class="pn2" id="pn" style="left:${z.px * 100 / MZ.W}%;top:${z.py * 100 / MZ.H}%;height:calc(100%/${MZ.H});width:calc(100%/${MZ.W})">🍕</div></div></div>
+  <div class="dp"><button class="btn sec u" data-d="u" aria-label="atas">▲</button><button class="btn sec l" data-d="l" aria-label="kiri">◀</button><button class="btn sec d" data-d="d" aria-label="bawah">▼</button><button class="btn sec r" data-d="r" aria-label="kanan">▶</button></div></div>
+  <p style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sun" id="ht" ${H.length ? '' : 'disabled'}>💡 Petunjuk ${H.length ? `(${z.hint}/${H.length})` : ''}</button><button class="btn sec" id="bm" style="min-height:48px">🎲 Pakai soal biasa</button></p><div id="hn">${H.slice(0, z.hint).map((h, k) => `<div class="bx">💡 ${k + 1}. ${fx(h)}</div>`).join('')}</div><div id="fb"></div></div></section></main>`;
+  const gerak = (dx, dy) => { if (z.done) return; const bit = dx < 0 ? 8 : dx > 0 ? 2 : dy < 0 ? 1 : 4; let moved = false;
+    for (let g = 0; g < 40; g++) { const b = z.c[z.py][z.px]; if (!(b & bit)) break; z.px += dx; z.py += dy; moved = true; const idx = z.pos.findIndex(p => p.x === z.px && p.y === z.py); if (idx > -1) break; const nb = z.c[z.py][z.px]; if ([1, 2, 4, 8].filter(t => nb & t).length !== 2 || !(nb & bit)) break; }
+    const pn = document.getElementById('pn'); pn.style.left = z.px * 100 / MZ.W + '%'; pn.style.top = z.py * 100 / MZ.H + '%'; if (moved) mainkan('klik');
+    const idx = z.pos.findIndex(p => p.x === z.px && p.y === z.py); if (idx > -1) setTimeout(() => pilihMaze(idx), 180); };
+  const arah = { u: [0, -1], d: [0, 1], l: [-1, 0], r: [1, 0] };
+  M.querySelectorAll('[data-d]').forEach(b => b.onclick = () => gerak(...arah[b.dataset.d]));
+  q.kb && document.removeEventListener('keydown', q.kb); q.kb = e => { const m = { ArrowUp: 'u', w: 'u', ArrowDown: 'd', s: 'd', ArrowLeft: 'l', a: 'l', ArrowRight: 'r', d: 'r' }[e.key]; if (m && document.getElementById('mz')) { e.preventDefault(); gerak(...arah[m]); } }; document.addEventListener('keydown', q.kb);
+  const mz = document.getElementById('mz'); let t0 = null; mz.addEventListener('touchstart', e => { t0 = [e.touches[0].clientX, e.touches[0].clientY]; }, { passive: true });
+  mz.addEventListener('touchend', e => { if (!t0) return; const dx = e.changedTouches[0].clientX - t0[0], dy = e.changedTouches[0].clientY - t0[1]; t0 = null; if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) return; Math.abs(dx) > Math.abs(dy) ? gerak(dx > 0 ? 1 : -1, 0) : gerak(0, dy > 0 ? 1 : -1); });
+  document.getElementById('ht').onclick = () => { if (z.hint < H.length) { z.hint++; mainkan('klik'); document.getElementById('hn').innerHTML = H.slice(0, z.hint).map((h, k) => `<div class="bx">💡 ${k + 1}. ${fx(h)}</div>`).join(''); document.getElementById('ht').textContent = `💡 Petunjuk (${z.hint}/${H.length})`; } };
+  document.getElementById('bm').onclick = () => { q.maze = false; document.removeEventListener('keydown', q.kb); tampil(); };
+  document.getElementById('pt').onclick = () => { clearInterval(q.tm); document.removeEventListener('keydown', q.kb); Q = null; peta(); };
+  function pilihMaze(idx) {
+    if (z.done) return; const h = LJ[idx]; z.coba++; if (q.j[s.id] === undefined) { q.j[s.id] = [h]; jawab(s); }   // nilai resmi memakai jawaban PERTAMA
+    const ok = [h].join(',') === String(s.kunci).trim(); const fb = document.getElementById('fb');
+    if (ok) { z.done = true; mainkan('benar'); burst(); fb.innerHTML = `<div class="card" style="background:#E3F7E8;margin-top:10px"><b>🎉 Hebat! Kamu menemukan jawaban yang benar ${z.coba === 1 ? 'pada percobaan pertama!' : 'setelah ' + z.coba + ' percobaan.'}</b><p>${fx(pecah(s.penjelasan).bahas)}</p><button class="btn" id="nm">${q.i === tot - 1 ? 'Selesai & Kirim ✓' : 'Misi berikutnya ▶'}</button></div>`; document.getElementById('nm').onclick = () => { if (q.i === tot - 1) { if (q.soal.every(x => adaJ(x, q.j[x.id]))) kirim(); else toast('Masih ada misi yang belum dijawab.'); } else { q.i++; tampil(); window.scrollTo(0, 0); } }; }
+    else { mainkan('salah'); if (z.hint < H.length) z.hint++; const nz = mzBuat(s.pilihan.length); Object.assign(z, nz, { done: false }); fb.innerHTML = `<div class="card" style="background:#FFE1DB;margin-top:10px"><b>💪 Belum tepat. Pilihan ${h} bukan jawabannya.</b><p>Labirin diacak lagi. Baca petunjuk, hitung ulang, lalu coba lagi!</p></div>`; setTimeout(() => { if (Q === q && q.mz === z) tampilMaze(); }, 1400); }
+  }
+}
+// ---------- hasil ----------
+function hasil(h, n) {
+  mainkan(h.skor >= 70 ? 'sorak' : 'lembut'); const ids = n === '1' ? [1, 2] : [3, 4], salah = (h.pembahasan || []).filter(p => !p.benar);
+  M.innerHTML = `<main class="wrap" style="max-width:760px"><section><div class="card" style="text-align:center">${pizi(h.skor >= 70 ? 'cheer' : 'encourage', 100)}<h2>Jawabanmu terkirim! 🎉</h2><div class="ring" style="--p:${h.skor}%"><span>${h.skor}</span></div><p>${h.benar} benar dari ${h.total} ${n === '2' ? 'misi' : 'soal'}${h.resmi === false ? ' • latihan (nilai resmi tidak berubah)' : ' • nilai resmi tercatat'}</p></div>
+  ${salah.length ? `<div class="card" style="margin-top:12px;background:#FFF3C4"><b>📖 Yuk perkuat dulu:</b><p>${ids.map(i => `<button class="btn sec" data-pm="${i}" style="min-height:44px;margin:4px">Materi ${i}</button>`).join('')}</p></div>` : ''}
+  <h3 style="margin-top:20px">Pembahasan</h3>${(h.pembahasan || []).sort((a, b) => a.benar - b.benar).map(kartuBahas).join('')}<p><button class="btn" id="rf">Lanjut ke refleksi</button> <button class="btn sec" id="pk">Kembali ke peta</button></p></section></main>`;
+  document.getElementById('rf').onclick = () => refleksi(n); document.getElementById('pk').onclick = peta; pasangPelajari(M);
+}
+async function hasilA3(h) {
+  if (!h) { const r = await api('a3.hasil', {}); if (!r.success) { toast(r.message); return peta(); } h = r.data; }
+  if (h.status === 'dihentikan' && !h.lihat) return layarDihentikan(h); mainkan(h.skor >= 70 ? 'sorak' : 'lembut');
+  const tp = {}; h.pembahasan.forEach(p => { const t = tp[p.tp || '—'] = tp[p.tp || '—'] || { b: 0, t: 0, top: p.topik }; t.t++; if (p.benar) t.b++; });
+  const kat = h.skor >= 85 ? 'Sangat Baik' : h.skor >= 70 ? 'Baik' : h.skor >= 55 ? 'Cukup' : 'Perlu Penguatan', salah = h.pembahasan.filter(p => !p.benar);
+  const kartu = f => h.pembahasan.filter(p => f === 'semua' || (f === 'benar') === p.benar).map(kartuBahas).join('') || '<p>Tidak ada.</p>';
+  M.innerHTML = `<main class="wrap" style="max-width:900px"><section><div class="card" style="text-align:center">${pizi(h.skor >= 70 ? 'cheer' : 'encourage', 110)}<span class="tag">${h.mode === 'resmi' ? '🔒 Nilai resmi terkunci' : 'Latihan ulang • nilai resmi tidak berubah'}</span><h2>Skor ${h.status === 'dihentikan' ? 'sementara ' : ''}Asesmen 3</h2><div class="ring" style="--p:${h.skor}%"><span>${h.skor}</span></div><b>${kat}</b><p>${h.benar} benar dari ${h.total} soal • ${h.pelanggaran} peringatan</p><p class="tag">Kode bukti: ${esc(h.kode || '')}</p></div>
+  <h3 style="margin-top:20px">1. Umpan balik & tindak lanjut per TP</h3><div class="card">${Object.keys(tp).sort().map(k => { const p = Math.round(100 * tp[k].b / tp[k].t), m = matTopik(tp[k].top) || matTopik(k); return `<div style="margin:12px 0"><b>${esc(k)}</b> • ${esc(tp[k].top || '')} — ${p}% ${p >= 85 ? '(Mahir)' : p >= 70 ? '(Cakap)' : '(Perlu penguatan)'}<span class="bar"><i class="${p >= 85 ? 'sv' : p >= 70 ? 'sk' : 'sr'}" style="width:${p}%"></i></span>${p < 85 && m ? `<button class="btn sec" data-pm="${m.id}" style="min-height:44px;margin-top:6px">📖 Pelajari ulang: ${esc(m.t)}</button>` : ''}</div>`; }).join('')}</div>
+  <h3 style="margin-top:20px">2. Soal yang belum tepat (${salah.length})</h3>${salah.map(kartuBahas).join('') || '<div class="card">🎉 Semua soal benar. Pertahankan!</div>'}
+  <h3 style="margin-top:20px">3. Pembahasan lengkap</h3><div class="tabs" id="flt"><button class="on" data-f="semua">Semua (${h.pembahasan.length})</button><button data-f="benar">✅ Benar (${h.benar})</button><button data-f="salah">❌ Salah (${h.pembahasan.length - h.benar})</button></div><div id="pbl">${kartu('semua')}</div>
+  <div class="card" style="margin-top:14px"><button class="btn sun" id="lt">🔁 Latihan ulang (nilai resmi tidak berubah)</button></div><p><button class="btn" id="rf">Lanjut ke refleksi</button> <button class="btn sec" id="pk">Kembali ke peta</button></p></section></main>`;
+  document.getElementById('rf').onclick = () => refleksi('3'); document.getElementById('pk').onclick = peta; document.getElementById('lt').onclick = () => petunjuk('3'); pasangPelajari(M);
+  M.querySelectorAll('[data-f]').forEach(b => b.onclick = () => { M.querySelectorAll('[data-f]').forEach(x => x.classList.toggle('on', x === b)); document.getElementById('pbl').innerHTML = kartu(b.dataset.f); pasangPelajari(M); });
 }
 
 </script>
@@ -658,20 +1279,21 @@ function parseCSV(t) {
 GP.bank = async () => {
   const [r, s] = await Promise.all([api('guru.bank.list'), api('guru.stimulus.list')]); if (!r.success) return gm(gErr(r)); stimCache = s.success ? s.data : [];
   window._bank = r.data; const f = window._bf || '';
-  gm(`<h2>Bank Soal</h2><p style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><select id="fa" aria-label="Filter asesmen"><option value="">Semua asesmen</option><option>1</option><option>2</option><option>3</option></select><button class="btn" id="nw">＋ Soal baru</button><button class="btn sec" id="st">＋ Stimulus</button><button class="btn sec" id="im">⬆ Impor CSV</button></p>
+  gm(`<h2>Bank Soal</h2><p style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><select id="fa" aria-label="Filter asesmen"><option value="">Semua asesmen</option><option>1</option><option>2</option><option>3</option></select><button class="btn" id="nw">＋ Soal baru</button><button class="btn sec" id="st">＋ Stimulus</button><button class="btn sec" id="im">⬆ Impor CSV</button><button class="btn sun" id="bw">📦 Muat soal bawaan</button></p>
   <div class="card scroll"><table class="tbl"><tr><th>ID</th><th>Asesmen</th><th>Jenis</th><th>Soal</th><th>Kunci</th><th>TP</th><th>Status</th><th></th></tr>${r.data.filter(q => !f || String(q.asesmen) === f).map((q, i) => `<tr><td>${esc(q.id)}</td><td>${esc(q.asesmen)}</td><td>${esc(q.jenis)}</td><td>${esc(String(q.teks).slice(0, 80))}</td><td>${esc(q.kunci)}</td><td>${esc(q.tp)}</td><td><span class="chp ${q.status === 'nonaktif' ? 'd' : 'a'}">${esc(q.status)}</span></td><td><button class="btn sec" data-e="${esc(q.id)}" style="min-height:40px">Ubah</button></td></tr>`).join('')}</table></div>`);
   fa.value = f; fa.onchange = () => { window._bf = fa.value; GP.bank(); };
   nw.onclick = () => formSoal(null); st.onclick = formStimulus; im.onclick = formImpor;
+  bw.onclick = async () => { if (!confirm('Muat 43 soal bawaan (Asesmen 1, 2, dan 3)? Soal dengan ID yang sama diperbarui; soal buatanmu sendiri tidak disentuh.')) return; bw.disabled = true; const x = await api('guru.bank.bawaan'); bw.disabled = false; toast(x.success ? `Selesai: ${x.data.baru} baru, ${x.data.diubah} diperbarui.` : x.message); GP.bank(); };
   M.querySelectorAll('[data-e]').forEach(b => b.onclick = () => formSoal(window._bank.find(q => q.id === b.dataset.e)));
 };
 function formSoal(q) {
   q = q || { id: '', asesmen: 3, jenis: 'PG', teks: '', pilihan: [], kunci: '', penjelasan: '', tp: '', topik: '', stimulus: '', status: 'aktif' };
-  kunciModal(0); modal(`<h2>${q.id ? 'Ubah' : 'Tambah'} soal</h2><div class="grid"><div><label for="fi">ID soal</label><input id="fi" value="${esc(q.id)}" ${q.id ? 'readonly' : ''}></div><div><label for="fas">Asesmen</label><select id="fas">${[1, 2, 3].map(n => `<option ${n == q.asesmen ? 'selected' : ''}>${n}</option>`).join('')}</select></div><div><label for="fj">Jenis</label><select id="fj">${[['PG', 'Pilihan ganda'], ['PGK', 'PG kompleks'], ['KAT', 'Benar/Salah'], ['ISI', 'Isian']].map(j => `<option value="${j[0]}" ${j[0] === q.jenis ? 'selected' : ''}>${j[1]}</option>`).join('')}</select></div></div>
+  kunciModal(0); modal(`<h2>${q.id ? 'Ubah' : 'Tambah'} soal</h2><div class="grid"><div><label for="fi">ID soal</label><input id="fi" value="${esc(q.id)}" ${q.id ? 'readonly' : ''}></div><div><label for="fas">Asesmen</label><select id="fas">${[1, 2, 3].map(n => `<option ${n == q.asesmen ? 'selected' : ''}>${n}</option>`).join('')}</select></div><div><label for="fj">Jenis</label><select id="fj">${[['PG', 'Pilihan ganda'], ['PGK', 'PG kompleks'], ['KAT', 'Benar/Salah'], ['URUT', 'Mengurutkan'], ['ISI', 'Isian']].map(j => `<option value="${j[0]}" ${j[0] === q.jenis ? 'selected' : ''}>${j[1]}</option>`).join('')}</select></div></div>
   <label for="ft">Teks soal</label><textarea id="ft" rows="3">${esc(q.teks)}</textarea><label for="fp">Pilihan / pernyataan (satu per baris)</label><textarea id="fp" rows="4">${esc((q.pilihan || []).join('\n'))}</textarea>
   <label for="fk">Kunci <small id="fh"></small></label><input id="fk" value="${esc(q.kunci)}"><label for="fe">Penjelasan</label><textarea id="fe" rows="2">${esc(q.penjelasan)}</textarea>
   <div class="grid"><div><label for="ftp">TP</label><input id="ftp" value="${esc(q.tp)}" placeholder="TP-4"></div><div><label for="fto">Topik materi</label><input id="fto" value="${esc(q.topik)}"></div><div><label for="fs">Stimulus</label><select id="fs"><option value="">— tanpa —</option>${stimCache.map(s => `<option value="${esc(s.id)}" ${s.id === q.stimulus ? 'selected' : ''}>${esc(s.id)} — ${esc(s.judul)}</option>`).join('')}</select></div><div><label for="fst">Status</label><select id="fst"><option ${q.status !== 'nonaktif' ? 'selected' : ''}>aktif</option><option ${q.status === 'nonaktif' ? 'selected' : ''}>nonaktif</option></select></div></div>
   <p style="display:flex;gap:8px"><button class="btn sec" id="x">Batal</button><button class="btn" id="sv">Simpan</button></p>`);
-  const h = () => fh.textContent = { PG: '(satu huruf, mis. B)', PGK: '(beberapa huruf, mis. A,C)', KAT: '(B/S per pernyataan, mis. B,S,B)', ISI: '(jawaban; alternatif dipisah |, mis. 2/4|1/2)' }[fj.value]; h(); fj.onchange = h;
+  const h = () => fh.textContent = { PG: '(satu huruf, mis. B)', PGK: '(beberapa huruf, mis. A,C)', KAT: '(B/S per pernyataan, mis. B,S,B)', URUT: '(urutan benar memakai huruf, mis. C,A,B,D)', ISI: '(jawaban; alternatif dipisah |, mis. 2/4|1/2)' }[fj.value]; h(); fj.onchange = h;
   sv.onclick = async () => { sv.disabled = true; const r = await api('guru.bank.simpan', { soal: [{ id: fi.value.trim(), asesmen: fas.value, jenis: fj.value, teks: ft.value.trim(), pilihan: fp.value.split('\n').map(x => x.trim()).filter(Boolean), kunci: fk.value.trim(), penjelasan: fe.value.trim(), tp: ftp.value.trim(), topik: fto.value.trim(), stimulus: fs.value, status: fst.value }] }); sv.disabled = false; toast(r.message); if (r.success) { tutupModal(); GP.bank(); } };
 }
 function formStimulus() {
